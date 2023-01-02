@@ -1,10 +1,22 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import pages from "./pages/page.config";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {pages.map((page) => {
+          return (
+            <Route
+              key={page.title}
+              path={page.route}
+              element={<page.Component />}
+            />
+          );
+        })}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
