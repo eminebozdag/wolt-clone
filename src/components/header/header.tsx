@@ -1,3 +1,4 @@
+import Button from "../button/button";
 import WoltLogo from "../icons/woltLogo";
 const Header = () => {
   return (
@@ -21,12 +22,12 @@ const Header = () => {
           <div className="flex justify-end items-center grow shrink basis-0">
             <div className="flex items-center">
               <div className="flex items-center gap-5">
-                <button className="h-[2.875rem] w-[2.875rem] font-medium text-sm text-font-gray">
+                <Button className="h-[2.875rem] w-[2.875rem] font-medium text-sm text-font-gray">
                   Log in
-                </button>
-                <button className="inline-flex justify-center items-center font-bold text-white h-[2.875rem] w-[5.5rem] rounded-[0.5rem] bg-blue ">
+                </Button>
+                <Button className="inline-flex justify-center items-center font-bold text-white h-[2.875rem] w-[5.5rem] rounded-[0.5rem] bg-blue ">
                   Sign up
-                </button>
+                </Button>
               </div>
             </div>
           </div>
