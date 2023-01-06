@@ -13,8 +13,13 @@ const Header = () => {
               className="shrink-0 relative inline-block bg-transparent rounded-lg "
               href="/en/discovery"
             >
-              <div className="flex items-center h-[4.3rem] w-[4rem]">
-                <WoltLogo height={23} width={63} />
+              <div className="flex items-center justify-center h-[4.3rem] w-[4.5rem]">
+                <WoltLogo
+                  height={68}
+                  width={120}
+                  viewBox="0 0 63 22"
+                  className="fill-black"
+                />
               </div>
             </a>
           </div>
