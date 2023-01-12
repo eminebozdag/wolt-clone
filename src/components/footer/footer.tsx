@@ -1,9 +1,12 @@
 import WoltLogo from "../icons/woltLogo";
+import Navigation from "../navigation/navigation";
+import navigationData from "./footer.config";
+
 const Footer = () => {
   return (
-    <footer className="bg-footer-gray p-[6.5rem]">
-      <div className="flex flex-row max-w-[1140px] m-auto">
-        <div className="flex-1 flex  justify-between gap-2 mb-[6.5rem] ">
+    <footer className="p-[6.5rem] bg-footer-gray md:px-[calc(2rem+env(safe-area-inset-bottom))] ">
+      <div className="flex flex-col max-w-[1140px] m-auto">
+        <div className="flex-1 flex flex-row justify-between gap-2 mb-[4rem] ">
           <div className="flex flex-col flex-[2_1_0%]">
             <WoltLogo
               height={26}
@@ -11,7 +14,7 @@ const Footer = () => {
               viewBox="0 0 64 24"
               className="fill-white mb-[1.75rem]"
             />
-            <div className="flex flex-wrap flex-col gap-[0.75rem]">
+            <div className="flex flex-wrap gap-[0.75rem]">
               <a
                 href="https://apps.apple.com/fi/app/wolt/id943905271?af_adset=wolt&af_keywords=wolt&af_sub1=https%3A%2F%2Fwww.google.com%2F&af_sub2=%2Fen%2Fdeu%2Fberlin&c=DEU_Web_FTU_Search_Brand_Berlin_EN&pid=google"
                 target="_blank"
@@ -38,206 +41,10 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="flex gap-[2rem] flex-[7_1_0%] justify-end ">
-            <nav className="flex-[1_1_0%]">
-              <label className="relative text-white opacity-75 leading-6 font-medium">
-                Let's do this together
-              </label>
-              <div className="mt-[1.5rem]">
-                <ul className="flex flex-col gap-[0.5rem] leading-6">
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-
-            <nav className="flex-[1_1_0%]">
-              <label className="relative text-white opacity-75 leading-6 font-medium">
-                Let's do this together
-              </label>
-              <div className="mt-[1.5rem]">
-                <ul className="flex flex-col gap-[0.5rem] leading-6">
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-
-            <nav className="flex-[1_1_0%]">
-              <label className="relative text-white opacity-75 leading-6 font-medium">
-                Let's do this together
-              </label>
-              <div className="mt-[1.5rem]">
-                <ul className="flex flex-col gap-[0.5rem] leading-6">
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-
-            <nav className="flex-[1_1_0%]">
-              <label className="relative text-white opacity-75 leading-6 font-medium">
-                Let's do this together
-              </label>
-              <div className="mt-[1.5rem]">
-                <ul className="flex flex-col gap-[0.5rem] leading-6">
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>{" "}
-                  <li>
-                    <a
-                      href="https://explore.wolt.com/en/deu/couriers?_gl=1*9zxgnh*_ga*MTk1OTYwOTYzNC4xNjcyNTA1Nzgx*_ga_CP7Z2F7NFM*MTY3MzAzNjAyOC4xMC4xLjE2NzMwMzYwMzEuNTcuMC4w"
-                      className="relative text-white text-sm font-normal cursor-pointer"
-                    >
-                      For couriers
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+          <div className="flex gap-[1.5rem] flex-[7_1_0%] justify-end ">
+            {navigationData.map((data) => (
+              <Navigation {...data} />
+            ))}
           </div>
         </div>
 
