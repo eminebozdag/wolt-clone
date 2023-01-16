@@ -10,8 +10,8 @@ interface Object {
 
 const Navigation = (data: Props) => {
   return (
-    <nav className="flex-[1_1_0%] lg:max-w-[20%]">
-      <label className="relative text-white opacity-75 leading-6 font-medium">
+    <nav className="flex-[1_1_0%] lg:max-w-[30%]">
+      <label className="relative text-white opacity-75 leading-6 font-medium text-lg md:text-base">
         {data.title}
       </label>
       <div className="mt-[1.5rem]">
@@ -21,7 +21,7 @@ const Navigation = (data: Props) => {
               <li>
                 <a
                   href={tag.route}
-                  className="relative p-0 text-white text-sm font-normal cursor-pointer hover:underline"
+                  className="relative p-0 text-white text-sm md:text-xs font-normal cursor-pointer hover:underline"
                 >
                   {tag.tag_title}
                 </a>
