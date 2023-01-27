@@ -1,8 +1,8 @@
 import SVGProps from "./types";
-const WoltLogo = ({ height, width, viewBox, className }: SVGProps) => {
+const WoltLogo = ({ color, height, width, viewBox, className }: SVGProps) => {
   return (
     <svg
-      fill="currentColor"
+      fill={color}
       width={width}
       height={height}
       viewBox={viewBox}
