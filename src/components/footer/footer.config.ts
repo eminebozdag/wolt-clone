@@ -73,7 +73,7 @@ const navigationData = [
     title: "Follow us",
     tags: [
       {
-        tag_title: "Blog",
+        tag_title: "Wolt Blog",
         route: "https://blog.wolt.com/fin/",
       },
       {
