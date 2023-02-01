@@ -10,7 +10,7 @@ import navigationData from "./footer.config";
 
 const Footer = () => {
   return (
-    <footer className="pt-24 sm:pt-10 pb-10 bg-footer-gray">
+    <footer className="pt-24 sm:pt-10 pb-10 bg-footer-gray ">
       <div className="flex flex-col max-w-[1140px] m-auto">
         <div className="flex-1 flex flex-row sm:flex-col justify-between gap-8 mb-20">
           <div className="flex flex-col flex-[2_1_0%] px-8">
@@ -59,7 +59,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-row  sm:flex-col  justify-between gap-2 px-8 text-xs max-md:text-blue">
+        <div className="flex flex-row sm:flex-col justify-between gap-4 px-8 text-xs md:text-xxs sm:text-xxs ">
           <div className="flex flex-row gap-4">
             <Button
               aria-label="Change country"
@@ -98,8 +98,8 @@ const Footer = () => {
             </Button>
           </div>
 
-          <div className="flex flex-row flex-wrap justify-between gap-10  text-white ">
-            <nav className="flex justify-between gap-6 items-center">
+          <div className="flex flex-row flex-wrap justify-between gap-x-6 gap-y-2 text-white ">
+            <nav className="flex justify-between gap-6 items-center sm:text-white/75 ">
               <a
                 href="https://explore.wolt.com/en/deu/accessibility-statement"
                 className="hover:underline"
