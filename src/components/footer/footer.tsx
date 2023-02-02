@@ -97,9 +97,8 @@ const Footer = () => {
               Accessibility
             </Button>
           </div>
-
           <div className="flex flex-row flex-wrap justify-between gap-x-6 gap-y-2 text-white ">
-            <nav className="flex justify-between gap-6 items-center sm:text-white/75 ">
+            <nav className="flex justify-between gap-6 items-center sm:text-white/75">
               <a
                 href="https://explore.wolt.com/en/deu/accessibility-statement"
                 className="hover:underline"

@@ -32,9 +32,14 @@ const EmbedNavigation = (data: Props) => {
         </div>
         <div className="mr-8">
           {visibility ? (
-            <DownArrow height={18} width={18} className="rotate-180" />
+            <DownArrow
+              height={18}
+              width={18}
+              className="rotate-180"
+              onClick={handleExpand}
+            />
           ) : (
-            <DownArrow height={18} width={18} />
+            <DownArrow height={18} width={18} onClick={handleExpand} />
           )}
         </div>
       </Button>
