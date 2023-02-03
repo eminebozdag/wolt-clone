@@ -15,9 +15,7 @@ const EmbedNavigation = (data: Props) => {
   const [visibility, setVisibility] = useState(false);
 
   const handleExpand = (e: any) => {
-    let isExpanded = e.target.getAttribute("aria-expanded") === "true";
-    e.target.setAttribute("aria-expanded", !isExpanded);
-    setVisibility(isExpanded);
+    setVisibility(!visibility);
   };
 
   return (

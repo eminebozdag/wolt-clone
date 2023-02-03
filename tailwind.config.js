@@ -26,6 +26,7 @@ module.exports = {
       gray: "#F2F3F5",
       "font-gray": "#202125",
       "footer-gray": "#141414",
+      "primary-text": "#202125",
       black: "#000000",
     },
 

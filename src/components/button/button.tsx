@@ -8,6 +8,8 @@ interface Props {
   "aria-expanded"?: boolean;
 
   onClick?(e: any): void;
+  onMouseEnter?(e: any): void;
+  onMouseLeave?(e: any): void;
 }
 
 const Button: React.FC<Props> = (props: Props) => {
@@ -18,6 +20,8 @@ const Button: React.FC<Props> = (props: Props) => {
     style,
     type,
     onClick,
+    onMouseEnter,
+    onMouseLeave,
   } = props;
   const defaultStyles = {
     primary: {},
@@ -34,6 +38,8 @@ const Button: React.FC<Props> = (props: Props) => {
         ...style,
       },
       onClick,
+      onMouseEnter,
+      onMouseLeave,
       ...props,
     },
     children
