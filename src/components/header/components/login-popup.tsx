@@ -1,5 +1,10 @@
 import Button from "../../button/button";
-const LoginPopUp = () => {
+
+interface Props {
+  onLogin?(e: any): void;
+}
+
+const LoginPopUp = ({ onLogin }: Props) => {
   return (
     <div
       role="dialog"
@@ -21,21 +26,22 @@ const LoginPopUp = () => {
       <div className="relative bg-white z-0 rounded-lg min-h-[1.75rem] drop-shadow-2xl">
         <div className="relative min-w-[12rem] rounded-lg border-[0.2px] border-font-gray/10 overflow-hidden">
           <div className="w-auto h-auto">
-            <div className="">
-              <div className="p-2">
-                <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-gray-light rounded-lg">
-                  Login or register
-                </Button>
-              </div>
-              <hr className="border-font-gray/10"></hr>
-              <div className="p-2">
-                <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-gray-light rounded-lg">
-                  Language: English
-                </Button>
-                <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-gray-light rounded-lg">
-                  Support
-                </Button>
-              </div>
+            <div className="p-2">
+              <Button
+                className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-gray-light rounded-lg"
+                onClick={onLogin}
+              >
+                Login or register
+              </Button>
+            </div>
+            <hr className="border-font-gray/10"></hr>
+            <div className="p-2">
+              <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-gray-light rounded-lg">
+                Language: English
+              </Button>
+              <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-gray-light rounded-lg">
+                Support
+              </Button>
             </div>
           </div>
         </div>
