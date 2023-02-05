@@ -4,23 +4,15 @@ import { dispatchShowLoginModal } from "../../../store/actions/globalActions";
 import Button from "../../button/button";
 import DownArrow from "../../icons/downArrow";
 import UserIcon from "../../icons/userIcon";
-import LoginPopUp from "../components/login-popup";
+import LoginToolbar from "./login-toolbar";
 
 const Login = () => {
   const [hover, setHover] = useState(false);
   const dispatch = useDispatch();
 
   const handleLogin = (e: any) => {
-    console.log("hey");
     dispatch(dispatchShowLoginModal(true));
   };
-
-  const handleOutsideClick = (e: any) => {
-    if (document.getElementById("loginModal")?.contains(e.target)) {
-      dispatch(dispatchShowLoginModal(false));
-    }
-  };
-  document.addEventListener("click", handleOutsideClick);
 
   return (
     <div className="flex items-center">
@@ -48,7 +40,7 @@ const Login = () => {
           <Button
             aria-expanded={false}
             aria-label="User menu"
-            className="inline-flex w-auto h-10 rounded-full bg-gray transition duration-150 ease-out hover:ease-in hover:bg-font-gray/10  gap-1 items-center justify-center py-[0.18rem] px-[0.18rem]"
+            className="inline-flex w-auto h-10 rounded-full bg-gray transition duration-150 ease-out hover:ease-in hover:bg-font-gray/10 gap-1 items-center justify-center py-[0.18rem] px-[0.18rem]"
           >
             <UserIcon
               height={34}
@@ -66,7 +58,11 @@ const Login = () => {
               <DownArrow height={24} width={24} fill={"footer-gray"} />
             )}
           </Button>
-          {hover && <LoginPopUp onLogin={handleLogin} />}
+          <LoginToolbar
+            onLogin={handleLogin}
+            show={hover}
+            onClose={() => setHover(false)}
+          />
         </div>
       </div>
     </div>

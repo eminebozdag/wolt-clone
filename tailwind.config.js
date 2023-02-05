@@ -3,10 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
+      xs: { min: "0px", max: "639px" },
       sm: { min: "0px", max: "767px" },
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
-      md: { min: "0768", max: "1023px" },
+      md: { min: "768", max: "1023px" },
       // => @media (min-width: 768px and max-width: 1023px) { ... }
 
       lg: { min: "1024px", max: "1279px" },
@@ -21,6 +22,7 @@ module.exports = {
     colors: {
       white: "#FFFFFF",
       blue: "#119EE0",
+      fblue: "#3975ea",
       yellow: "#F8F0CD",
       "gray-light": "#F6F6F6",
       gray: "#F2F3F5",
@@ -39,8 +41,18 @@ module.exports = {
       xl: ["24px", "32px"],
     },
 
-    fontFamily: {},
-    extend: {},
+    fontFamily: {
+      header: ["Quicksand", "sans-serif"],
+    },
+    extend: {
+      transitionProperty: {
+        height: "height",
+        ease: "transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);",
+      },
+      variants: {
+        height: ["responsive", "hover", "focus"],
+      },
+    },
   },
   plugins: [require("tailwindcss-safe-area")],
   mode: "jit",
