@@ -25,7 +25,7 @@ module.exports = {
       fblue: "#3975ea",
       yellow: "#F8F0CD",
       "gray-light": "#F6F6F6",
-      gray: "#F2F3F5",
+      gray: "#20212514",
       "font-gray": "#202125",
       "footer-gray": "#141414",
       "primary-text": "#202125",
