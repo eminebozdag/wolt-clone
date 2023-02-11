@@ -42,7 +42,7 @@ module.exports = {
     },
 
     fontFamily: {
-      header: ["Quicksand", "sans-serif"],
+      header: ["Omnes", "sans-serif"],
     },
     extend: {
       transitionProperty: {

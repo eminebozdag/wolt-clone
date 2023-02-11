@@ -1,21 +1,25 @@
+import clsx from "clsx";
+import React, { useState } from "react";
 import Button from "../../../../../button/button";
+
 const Form = () => {
-  const emailInput = document.getElementById("email_input");
-  const emailLabel = document.getElementById("email_label");
+  const [isFocused, setIsFocused] = useState(false);
 
   return (
     <form className="flex flex-col mt-4">
       <div>
         <div className="relative w-full">
           <input
-            id="email_input"
-            className=" pt-5 z-50 pb-1 px-4 text-sm border-2 border-gray bg-transparent rounded-lg w-full  hover:border-blue focus:outline-none focus:border-2 focus:border-blue transition active:border-blue duration-300 ease-out"
+            className="pt-5 pb-1 px-4 z-50 text-base border-2 border-gray bg-transparent rounded-lg w-full hover:border-blue focus:outline-none focus:border-[3px] focus:border-blue transition active:border-blue duration-300 ease-out"
             type="email"
-            placeholder=" "
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
           />
           <label
-            id="email_label"
-            className="translate-y-[-0.5rem] text-xs absolute left-4 right-4 top-[0.8rem] text-gray/70 w-0 transition duration-120 ease-out"
+            className={clsx(
+              "absolute left-4 right-4 top-[0.8rem] text-gray/70 w-0 transition duration-120 ease-out",
+              isFocused ? "translate-y-[-0.5rem] text-xs" : "text-base"
+            )}
           >
             Email
           </label>

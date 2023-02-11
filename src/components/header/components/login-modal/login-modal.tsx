@@ -11,8 +11,6 @@ interface Props {
 }
 
 const LoginModal = ({ onClose, show }: Props) => {
-  const loginModal = document.getElementById("login_modal");
-
   return (
     <CSSTransition
       in={show}
@@ -21,11 +19,8 @@ const LoginModal = ({ onClose, show }: Props) => {
       classNames="modal-fade"
     >
       <div className="fixed flex items-center justify-center w-full h-full z-40 top-0 bg-font-gray/30">
-        <div
-          id="login_modal"
-          className="fixed xs:absolute xs:bottom-0 xs:right-0 xs:left-0 bg-white shadow-[rgba(0,0,0,0.2)_0px_7px_29px_0px] rounded-2xl z-20"
-        >
-          <div className="w-[100vw] max-w-md">
+        <div className="fixed xs:absolute xs:bottom-0 xs:right-0 xs:left-0 bg-white shadow-[rgba(0,0,0,0.2)_0px_7px_29px_0px] rounded-2xl z-20">
+          <div className="w-[100vw] max-w-lg">
             <div className="relative w-full h-20 xs:w-[100vw]">
               <div className="absolute right-4 top-4">
                 <Button
@@ -39,10 +34,10 @@ const LoginModal = ({ onClose, show }: Props) => {
             <div className="px-4 xs:w-[100vw]">
               <div className="flex flex-col justify-between">
                 <div className="mb-6">
-                  <h2 className="text-[1.7rem] font-[1000] font-header mb-4 xs:text-[1.5rem]">
+                  <h2 className="text-[2rem] font-[1000] font-header mb-4 xs:text-[1.5rem]">
                     Create an account or log in
                   </h2>
-                  <div className="text-sm text-font-gray">
+                  <div className="text-base text-font-gray">
                     Log in below or create a new Wolt account.
                   </div>
                 </div>
@@ -50,7 +45,7 @@ const LoginModal = ({ onClose, show }: Props) => {
                   {social_logins.map((social) => {
                     return (
                       <SocialLogin
-                        Component={<social.Component width={14} />}
+                        Component={<social.Component width={16} />}
                         text={social.text}
                         style={social.style}
                       />
@@ -64,7 +59,7 @@ const LoginModal = ({ onClose, show }: Props) => {
                     <hr className="flex grow shrink basis-auto border-[1px] border-gray"></hr>
                   </div>
                   <Form />
-                  <span className="text-font-gray/70 text-xxs leading-4 py-4">
+                  <span className="text-font-gray/70 text-xs leading-4 py-4">
                     {"Please visit  "}
                     <a
                       font-family="default"
