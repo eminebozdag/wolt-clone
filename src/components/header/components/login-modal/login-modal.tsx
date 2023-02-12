@@ -52,11 +52,11 @@ const LoginModal = ({ onClose, show }: Props) => {
                     );
                   })}
                   <div className="flex mt-4 items-center">
-                    <hr className="flex grow shrink basis-auto border-[1px] border-gray"></hr>
+                    <hr className="flex grow shrink basis-auto border-gray"></hr>
                     <span className="mx-4 text-sm text-font-gray/90">
                       or log in with email
                     </span>
-                    <hr className="flex grow shrink basis-auto border-[1px] border-gray"></hr>
+                    <hr className="flex grow shrink basis-auto  border-gray"></hr>
                   </div>
                   <Form />
                   <span className="text-font-gray/70 text-xs leading-4 py-4">

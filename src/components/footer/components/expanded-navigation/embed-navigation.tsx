@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "../button/button";
-import DownArrow from "../icons/downArrow";
+import Button from "../../../button/button";
+import DownArrow from "../../../icons/downArrow";
 
 interface Props {
   title?: string;

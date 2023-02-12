@@ -1,8 +1,13 @@
 import Layout from "../../components/layout/layout";
+import HomeBanner from "./components/home-banner/home-banner";
 const DefaultPageTemplate = () => {
   return (
     <Layout>
-      <div className="h-[17rem]">default page template</div>
+      <main className="flex:[1_1_0%] z-0">
+        <div>
+          <HomeBanner />
+        </div>
+      </main>
     </Layout>
   );
 };

@@ -17,7 +17,7 @@ const Navigation = (data: Props) => {
       <div className="mt-[1.5rem]">
         {data.tags?.map((tag) => {
           return (
-            <ul className="flex flex-col leading-7 ">
+            <ul className="flex flex-col leading-7">
               <li>
                 <a
                   href={tag.route}

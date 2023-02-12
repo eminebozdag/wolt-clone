@@ -4,7 +4,7 @@ interface Props {
   children?: any;
   className?: string;
   style?: React.CSSProperties;
-  type?: "primary" | "secondary";
+  type?: "primary" | "secondary" | "submit";
   "aria-expanded"?: boolean;
 
   onClick?(e: any): void;
@@ -26,6 +26,7 @@ const Button: React.FC<Props> = (props: Props) => {
   const defaultStyles = {
     primary: {},
     secondary: {},
+    submit: {},
   };
 
   return React.createElement(

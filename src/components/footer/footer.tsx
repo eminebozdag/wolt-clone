@@ -1,16 +1,16 @@
 import React from "react";
 import Button from "../button/button";
-import EmbedNavigation from "../expanded-navigation/embed-navigation";
+import EmbedNavigation from "../footer/components/expanded-navigation/embed-navigation";
+import Navigation from "../footer/components/navigation/navigation";
 import AccessibilityIcon from "../icons/accessibilityIcon";
 import LanguageIcon from "../icons/languageIcon";
 import LocationIcon from "../icons/locationIcon";
 import WoltLogo from "../icons/woltLogo";
-import Navigation from "../navigation/navigation";
 import navigationData from "./footer.config";
 
 const Footer = () => {
   return (
-    <footer className="pt-24 sm:pt-10 pb-10 bg-footer-gray ">
+    <footer className="pt-24 sm:pt-10 pb-10 bg-footer-gray">
       <div className="flex flex-col max-w-[1140px] m-auto">
         <div className="flex-1 flex flex-row sm:flex-col justify-between gap-8 mb-20">
           <div className="flex flex-col flex-[2_1_0%] px-8">
