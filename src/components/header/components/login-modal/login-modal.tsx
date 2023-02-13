@@ -18,7 +18,7 @@ const LoginModal = ({ onClose, show }: Props) => {
       timeout={300}
       classNames="modal-fade"
     >
-      <div className="fixed flex items-center justify-center w-full h-full z-40 top-0 bg-font-gray/30">
+      <div className="fixed flex items-center justify-center w-full h-full z-40 top-0 bg-font-gray/60">
         <div className="fixed xs:absolute xs:bottom-0 xs:right-0 xs:left-0 bg-white shadow-[rgba(0,0,0,0.2)_0px_7px_29px_0px] rounded-2xl z-20">
           <div className="w-[100vw] max-w-lg">
             <div className="relative w-full h-20 xs:w-[100vw]">
@@ -34,7 +34,7 @@ const LoginModal = ({ onClose, show }: Props) => {
             <div className="px-4 xs:w-[100vw]">
               <div className="flex flex-col justify-between">
                 <div className="mb-6">
-                  <h2 className="text-[2rem] font-[1000] font-header mb-4 xs:text-[1.5rem]">
+                  <h2 className="text-[2rem] font-header font-[800] mb-3 xs:text-[1.5rem]">
                     Create an account or log in
                   </h2>
                   <div className="text-base text-font-gray">

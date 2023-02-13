@@ -18,6 +18,7 @@
     "react-router": "^6.6.1",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "react-text-transition": "^3.0.2",
     "react-transition-group": "^4.4.5",
     "redux-devtools-extension": "^2.13.9",
     "tailwindcss-safe-area": "^0.2.2",

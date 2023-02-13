@@ -1,4 +1,6 @@
 import clsx from "clsx";
+import TextAnimation from "./animation/text-animation";
+
 const HomeBanner = () => {
   return (
     <div
@@ -12,11 +14,16 @@ const HomeBanner = () => {
           src="https://consumer-static-assets.wolt.com/frontpage-assets/hero-images/0_Sunday.jpg"
           loading="lazy"
           alt="daily_image"
-          className="absolute top-0 left-[28%] w-auto min-h-full min-w-[62.5rem] object-cover opacity-100"
+          className="absolute top-0 right-[-30%] w-100px min-h-full min-w-[62.5rem] object-cover opacity-100"
         />
-        <div className="relative w-[34rem] flex flex-col justify-center h-full px-7">
-          <label>Delivery address</label>
-          <div></div>
+        <div className="hidden xs:block absolute top-0 w-full h-full z-10 bg-gray/40"></div>
+        <div className="relative flex flex-col justify-center h-full px-7 z-20">
+          <TextAnimation />
+
+          <label className="font-header font-[600] text-lg xs:text-white xs:text-base">
+            Delivery address
+          </label>
+          <div className="relative flex"></div>
           <div></div>
         </div>
       </div>

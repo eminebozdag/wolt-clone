@@ -28,7 +28,6 @@ module.exports = {
       gray: "#20212514",
       "font-gray": "#202125",
       "footer-gray": "#141414",
-      "primary-text": "#202125",
       black: "#000000",
     },
 
@@ -43,6 +42,7 @@ module.exports = {
 
     fontFamily: {
       header: ["Omnes", "sans-serif"],
+      text: ["Omnes", "sans-serif"],
     },
     extend: {
       transitionProperty: {

@@ -5,7 +5,7 @@ const social_logins = [
   {
     title: "Google",
     Component: GoogleIcon,
-    text: "Continue with Apple",
+    text: "Continue with Google",
     style:
       "flex items-center font-semibold p-4 border-2 border-gray bg-white rounded-lg transition duration-120 ease-out hover:ease-in hover:bg-font-gray/10 hover:border-font-gray/10",
   },
