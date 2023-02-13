@@ -4,7 +4,7 @@ import EmbedNavigation from "../footer/components/expanded-navigation/embed-navi
 import Navigation from "../footer/components/navigation/navigation";
 import AccessibilityIcon from "../icons/accessibilityIcon";
 import LanguageIcon from "../icons/languageIcon";
-import LocationIcon from "../icons/locationIcon";
+import LocationIcon from "../icons/pinIcon";
 import WoltLogo from "../icons/woltLogo";
 import navigationData from "./footer.config";
 

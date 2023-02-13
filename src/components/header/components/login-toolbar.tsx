@@ -13,11 +13,11 @@ const LoginToolbar = ({ onLogin, show, onClose }: Props) => {
       in={show}
       unmountOnExit
       timeout={300}
-      classNames="modal-fade"
+      classNames="modal-fade "
     >
       <div
         role="dialog"
-        className="absolute top-[3.1rem] left-[-125px] opacity-100 bg-white rounded-lg"
+        className="absolute top-[3.1rem] left-[-125px] opacity-100 bg-white rounded-lg z-50 "
         onClick={onClose}
       >
         <div

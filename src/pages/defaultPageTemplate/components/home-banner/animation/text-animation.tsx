@@ -10,7 +10,7 @@ const TextAnimation = () => {
   }, []);
 
   return (
-    <div className="relative h-72 w-[32rem] text-font-gray text-[4rem] xs:text-white sm:text-[3rem] sm:w-[24rem] sm:h-40 font-text leading-[80px] ">
+    <div className="relative h-66 w-[32rem] text-font-gray text-[4rem] xs:text-white sm:text-[3rem] sm:w-[24rem] sm:h-40 font-text leading-[80px] mb-10 ">
       <div className="absolute bottom-0">
         {`${texts[index % texts.length]}`.split(" ").map((n, i) => (
           <ReactTextTransition
