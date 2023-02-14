@@ -27,18 +27,18 @@ const LoginToolbar = ({ onLogin, show, onClose }: Props) => {
           <svg viewBox="0 0 32 16" className="fill-c-white">
             <path
               d="M 16,0 L32,16 H0 Z"
-              className="drop-shadow-2xl fill-c-font-gray/10"
+              className="drop-shadow-2xl fill-c-gray"
             ></path>
             <path d="M 16,1 L31,16 H1 Z"></path>
           </svg>
         </div>
 
         <div className="relative bg-c-white z-0 rounded-lg min-h-[1.75rem] drop-shadow-2xl">
-          <div className="relative min-w-[12rem] rounded-lg border-[0.2px] border-c-font-gray/10 overflow-hidden">
+          <div className="relative min-w-[12rem] rounded-lg border-[0.2px] border-c-gray overflow-hidden">
             <div className="w-auto h-auto">
               <div className="p-2">
                 <Button
-                  className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-c-gray-light rounded-lg"
+                  className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-c-gray-light/50 active:bg-c-gray-light rounded-lg"
                   onClick={onLogin}
                 >
                   Login or register
@@ -46,10 +46,10 @@ const LoginToolbar = ({ onLogin, show, onClose }: Props) => {
               </div>
               <hr className="border-c-font-gray/10"></hr>
               <div className="p-2">
-                <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-c-gray-light rounded-lg">
+                <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-c-gray-light/50 active:bg-c-gray-light rounded-lg">
                   Language: English
                 </Button>
-                <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-c-gray-light rounded-lg">
+                <Button className="text-primary-text font-normal text-sm cursor-pointer text-start px-4 py-2 w-full hover:bg-c-gray-light/50 active:bg-c-gray-light rounded-lg">
                   Support
                 </Button>
               </div>

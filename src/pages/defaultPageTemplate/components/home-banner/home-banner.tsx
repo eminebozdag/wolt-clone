@@ -21,15 +21,15 @@ const HomeBanner = ({ color, image }: Props) => {
   return (
     <div
       className={clsx(
-        "flex justify-center items-end h-[40rem] xs:h-[30rem] overflow-hidden",
+        "flex justify-center items-end h-[40rem] sm:h-[36rem] overflow-hidden",
         color
       )}
     >
       <div className="relative max-w-[75rem] w-full h-full flex justify-start items-end">
         <img
-          src={`/assets/${image}.jpg`}
+          src={`/assets/banner-images/${image}.jpg`}
           loading="lazy"
-          alt="daily_image"
+          alt="daily_banner"
           className="absolute top-0 right-[-30%] w-100px min-h-full min-w-[60rem] object-cover opacity-100"
         />
         <div className="hidden xs:block absolute top-0 w-full h-full z-10 bg-c-gray/40"></div>
@@ -52,7 +52,7 @@ const HomeBanner = ({ color, image }: Props) => {
               />
               <label
                 className={clsx(
-                  "absolute w-60 left-14 right-4 top-[0.8rem] text-c-gray/70 transition duration-120 ease-out",
+                  "absolute w-60 left-14 right-4 top-[0.8rem] text-c-gray-medium transition duration-120 ease-out",
                   isFocused || address
                     ? "translate-y-[-0.5rem] text-xs"
                     : "text-base"

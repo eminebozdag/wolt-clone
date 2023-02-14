@@ -45,8 +45,9 @@ module.exports = {
         "c-lavender": "#EBEAF1",
         "c-yellow": "#F6EFC6",
         "c-lime": "#CBE2AE",
-        "c-gray-light": "#F6F6F6",
-        "c-gray": "#20212514",
+        "c-gray-light": "#EEEEEE",
+        "c-gray-medium": "#606060",
+        "c-gray": "#E4E4E4",
         "c-font-gray": "#202125",
         "c-footer-gray": "#141414",
         "c-black": "#000000",
@@ -54,6 +55,9 @@ module.exports = {
       backgroundColor: (theme) => theme("colors"),
       textColor: (theme) => theme("colors"),
 
+      gridTemplateColumns: {
+        auto: "repeat(auto-fill,minmax(220px,1fr))",
+      },
       transitionProperty: {
         height: "height",
         ease: "transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);",

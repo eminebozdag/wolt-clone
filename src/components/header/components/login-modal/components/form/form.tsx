@@ -40,7 +40,7 @@ const Form = () => {
           />
           <label
             className={clsx(
-              "absolute left-4 right-4 top-[0.8rem] text-c-gray/70 w-0 transition duration-120 ease-out",
+              "absolute left-4 right-4 top-[0.8rem] text-c-gray-medium w-0 transition duration-120 ease-out",
               isFocused || email ? "translate-y-[-0.5rem] text-xs" : "text-base"
             )}
           >

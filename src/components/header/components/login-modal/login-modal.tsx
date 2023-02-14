@@ -25,7 +25,7 @@ const LoginModal = ({ onClose, show }: Props) => {
               <div className="absolute right-4 top-4">
                 <Button
                   onClick={onClose}
-                  className="inline-flex items-center justify-center p-3 rounded-full bg-c-gray transition duration-120 ease-out hover:ease-in hover:bg-c-font-gray/10"
+                  className="inline-flex items-center justify-center p-3 rounded-full bg-c-gray-light transition duration-120 ease-out hover:ease-in hover:bg-c-gray"
                 >
                   <CloseIcon height={20} width={20} fill={"footer-c-gray"} />
                 </Button>
@@ -53,13 +53,13 @@ const LoginModal = ({ onClose, show }: Props) => {
                   })}
                   <div className="flex mt-4 items-center">
                     <hr className="flex grow shrink basis-auto border-c-gray"></hr>
-                    <span className="mx-4 text-sm text-c-font-gray/90">
+                    <span className="mx-4 text-sm text-c-font-gray">
                       or log in with email
                     </span>
                     <hr className="flex grow shrink basis-auto border-c-gray"></hr>
                   </div>
                   <Form />
-                  <span className="text-c-font-gray/70 text-xs leading-4 py-4">
+                  <span className="text-c-gray-medium text-xs leading-4 py-4">
                     {"Please visit  "}
                     <a
                       font-family="default"

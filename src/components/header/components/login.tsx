@@ -40,7 +40,7 @@ const Login = () => {
           <Button
             aria-expanded={false}
             aria-label="User menu"
-            className="inline-flex w-auto h-10 rounded-full bg-c-gray transition duration-150 ease-out hover:ease-in hover:bg-c-font-gray/10 gap-1 items-center justify-center py-[0.18rem] px-[0.18rem]"
+            className="inline-flex w-auto h-10 rounded-full bg-c-gray-light transition duration-150 ease-out hover:ease-in hover:bg-c-gray gap-1 items-center justify-center py-[0.18rem] px-[0.18rem]"
           >
             <UserIcon
               height={34}
@@ -51,7 +51,7 @@ const Login = () => {
               <DownArrow
                 height={24}
                 width={24}
-                fill={"footer-c-gray"}
+                fill={"c-font-gray"}
                 className="rotate-180"
               />
             ) : (
