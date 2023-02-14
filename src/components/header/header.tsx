@@ -3,7 +3,7 @@ import Login from "./components/login";
 
 const Header = () => {
   return (
-    <div className="block h-16 bg-white border-b-[1px] border-b-gray-light">
+    <div className="block h-16 bg-c-white border-b-[1px] border-b-c-gray-light">
       <header className="relative h-16">
         <div className="absolute w-full h-16 z-[-1]"></div>
         <div className="relative flex items-center h-16 justify-between justify-items-center max-w-[1200px] px-7 mx-auto ">

@@ -9,7 +9,7 @@ const DownArrow = ({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="lightgray"
+      fill="clightgray"
       width={width}
       height={height}
       viewBox="0 0 24 24"

@@ -18,16 +18,16 @@ const LoginModal = ({ onClose, show }: Props) => {
       timeout={300}
       classNames="modal-fade"
     >
-      <div className="fixed flex items-center justify-center w-full h-full z-40 top-0 bg-font-gray/60">
-        <div className="fixed xs:absolute xs:bottom-0 xs:right-0 xs:left-0 bg-white shadow-[rgba(0,0,0,0.2)_0px_7px_29px_0px] rounded-2xl z-20">
+      <div className="fixed flex items-center justify-center w-full h-full z-40 top-0 bg-c-font-gray/60">
+        <div className="fixed xs:absolute xs:bottom-0 xs:right-0 xs:left-0 bg-c-white shadow-[rgba(0,0,0,0.2)_0px_7px_29px_0px] rounded-2xl z-20">
           <div className="w-[100vw] max-w-lg">
             <div className="relative w-full h-20 xs:w-[100vw]">
               <div className="absolute right-4 top-4">
                 <Button
                   onClick={onClose}
-                  className="inline-flex items-center justify-center p-3 rounded-full bg-gray transition duration-120 ease-out hover:ease-in hover:bg-font-gray/10"
+                  className="inline-flex items-center justify-center p-3 rounded-full bg-c-gray transition duration-120 ease-out hover:ease-in hover:bg-c-font-gray/10"
                 >
-                  <CloseIcon height={20} width={20} fill={"footer-gray"} />
+                  <CloseIcon height={20} width={20} fill={"footer-c-gray"} />
                 </Button>
               </div>
             </div>
@@ -37,7 +37,7 @@ const LoginModal = ({ onClose, show }: Props) => {
                   <h2 className="text-[2rem] font-header font-[800] mb-3 xs:text-[1.5rem]">
                     Create an account or log in
                   </h2>
-                  <div className="text-base text-font-gray">
+                  <div className="text-base text-c-font-gray">
                     Log in below or create a new Wolt account.
                   </div>
                 </div>
@@ -52,21 +52,21 @@ const LoginModal = ({ onClose, show }: Props) => {
                     );
                   })}
                   <div className="flex mt-4 items-center">
-                    <hr className="flex grow shrink basis-auto border-gray"></hr>
-                    <span className="mx-4 text-sm text-font-gray/90">
+                    <hr className="flex grow shrink basis-auto border-c-gray"></hr>
+                    <span className="mx-4 text-sm text-c-font-gray/90">
                       or log in with email
                     </span>
-                    <hr className="flex grow shrink basis-auto  border-gray"></hr>
+                    <hr className="flex grow shrink basis-auto border-c-gray"></hr>
                   </div>
                   <Form />
-                  <span className="text-font-gray/70 text-xs leading-4 py-4">
+                  <span className="text-c-font-gray/70 text-xs leading-4 py-4">
                     {"Please visit  "}
                     <a
                       font-family="default"
                       href="https://explore.wolt.com/en/deu/privacy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue font-medium"
+                      className="text-c-blue font-medium"
                     >
                       Wolt Privacy Statement
                     </a>
@@ -78,7 +78,7 @@ const LoginModal = ({ onClose, show }: Props) => {
                       href="https://hcaptcha.com/privacy"
                       target="_blank"
                       rel="noreferrer"
-                      className="text-blue font-medium"
+                      className="text-c-blue font-medium"
                     >
                       Privacy Policy
                     </a>
@@ -88,7 +88,7 @@ const LoginModal = ({ onClose, show }: Props) => {
                       href="https://hcaptcha.com/terms"
                       target="_blank"
                       rel="noreferrer"
-                      className="text-blue font-medium"
+                      className="text-c-blue font-medium"
                     >
                       Terms of Service
                     </a>

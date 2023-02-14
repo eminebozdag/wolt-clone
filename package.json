@@ -21,7 +21,6 @@
     "react-text-transition": "^3.0.2",
     "react-transition-group": "^4.4.5",
     "redux-devtools-extension": "^2.13.9",
-    "tailwindcss-safe-area": "^0.2.2",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },

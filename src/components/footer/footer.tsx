@@ -10,7 +10,7 @@ import NAVIGATION_DATA from "./footer.config";
 
 const Footer = () => {
   return (
-    <footer className="pt-24 sm:pt-10 pb-10 bg-footer-gray">
+    <footer className="pt-24 sm:pt-10 pb-10 bg-c-footer-gray">
       <div className="flex flex-col max-w-[1140px] m-auto">
         <div className="flex-1 flex flex-row sm:flex-col justify-between gap-8 mb-20">
           <div className="flex flex-col flex-[2_1_0%] px-8">
@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="flex flex-row gap-4">
             <Button
               aria-label="Change country"
-              className="flex items-center gap-1 text-white text-start cursor-pointer hover:underline"
+              className="flex items-center gap-1 text-c-white text-start cursor-pointer hover:underline"
             >
               <div className="h-4 w-4 overflow-hidden">
                 <div className="flex items-center justify-center w-full h-full ">
@@ -75,7 +75,7 @@ const Footer = () => {
 
             <Button
               aria-label="Change language"
-              className="flex items-center gap-1 text-white text-start cursor-pointer hover:underline"
+              className="flex items-center gap-1 text-c-white text-start cursor-pointer hover:underline"
             >
               <div className="h-4 w-4 overflow-hidden">
                 <div className="flex items-center justify-center w-full h-full">
@@ -87,7 +87,7 @@ const Footer = () => {
 
             <Button
               aria-label="Open accessibility settings"
-              className="flex items-center gap-1 text-white text-start cursor-pointer hover:underline"
+              className="flex items-center gap-1 text-c-white text-start cursor-pointer hover:underline"
             >
               <div className="h-4 w-4 overflow-hidden">
                 <div className="flex items-center justify-center w-full h-full">
@@ -97,8 +97,8 @@ const Footer = () => {
               Accessibility
             </Button>
           </div>
-          <div className="flex flex-row flex-wrap justify-between gap-x-6 gap-y-2 text-white ">
-            <nav className="flex justify-between gap-6 items-center sm:text-white/75">
+          <div className="flex flex-row flex-wrap justify-between gap-x-6 gap-y-2 text-c-white ">
+            <nav className="flex justify-between gap-6 items-center sm:text-c-white/75">
               <a
                 href="https://explore.wolt.com/en/deu/accessibility-statement"
                 className="hover:underline"
@@ -118,7 +118,7 @@ const Footer = () => {
                 Privacy Policy
               </a>
             </nav>
-            <div className="text-white/75">©️ Wolt 2014–2023</div>
+            <div className="text-c-white/75">©️ Wolt 2014–2023</div>
           </div>
         </div>
       </div>

@@ -5,32 +5,32 @@ interface BannerItem {
 
 const BANNERS: BannerItem[] = [
   {
-    color: "light-yellow",
+    color: "bg-light-yellow",
     image: "0_Sunday",
   },
 
   {
-    color: "green",
+    color: "bg-c-green",
     image: "1_Monday",
   },
   {
-    color: "purple",
+    color: "bg-c-purple",
     image: "2_Tuesday",
   },
   {
-    color: "pink",
+    color: "bg-c-pink",
     image: "3_Wednesday",
   },
   {
-    color: "lavender",
+    color: "bg-c-lavender",
     image: "4_Thursday",
   },
   {
-    color: "yellow",
+    color: "bg-c-yellow",
     image: "5_Friday",
   },
   {
-    color: "lime",
+    color: "bg-c-lime",
     image: "6_Saturday",
   },
 ];

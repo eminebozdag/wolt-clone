@@ -1,4 +1,4 @@
-const texts = [
+const TEXTS = [
   "Discover and get great food.",
   "You deserve this.",
   "Looking for something healthy?",
@@ -6,6 +6,8 @@ const texts = [
   "Time for something new?",
   "Feeling lazy?",
   "Craving sushi?",
+  "Something green for lunch?",
+  "Taco Tuesday?",
   "Something with Netflix tonight?",
   "Hungry after the gym?",
   "Hungry after a jog?",
@@ -17,4 +19,4 @@ const texts = [
   "Too tired for grocery shopping?",
 ];
 
-export default texts;
+export default TEXTS;

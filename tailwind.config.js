@@ -19,23 +19,6 @@ module.exports = {
       "2xl": { min: "1536px" },
       // => @media (min-width: 1536px) { ... }
     },
-    colors: {
-      white: "#FFFFFF",
-      blue: "#119EE0",
-      fblue: "#3975ea",
-      "light-yellow": "#F7F0CC",
-      green: "#D0E6C2",
-      purple: "#F0ECF4",
-      pink: "#ECBAAD",
-      lavender: "#EBEAF1",
-      yellow: "#F6EFC6",
-      lime: "#CBE2AE",
-      "gray-light": "#F6F6F6",
-      gray: "#20212514",
-      "font-gray": "#202125",
-      "footer-gray": "#141414",
-      black: "#000000",
-    },
 
     fontSize: {
       xxs: ["11px"],
@@ -45,12 +28,32 @@ module.exports = {
       lg: ["20px", "28px"],
       xl: ["24px", "32px"],
     },
-
     fontFamily: {
       header: ["Omnes", "sans-serif"],
       text: ["Omnes", "sans-serif"],
     },
+
     extend: {
+      colors: {
+        "c-white": "#FFFFFF",
+        "c-blue": "#119EE0",
+        "c-fblue": "#3975ea",
+        "c-light-yellow": "#F7F0CC",
+        "c-green": "#D0E6C2",
+        "c-purple": "#F0ECF4",
+        "c-pink": "#ECBAAD",
+        "c-lavender": "#EBEAF1",
+        "c-yellow": "#F6EFC6",
+        "c-lime": "#CBE2AE",
+        "c-gray-light": "#F6F6F6",
+        "c-gray": "#20212514",
+        "c-font-gray": "#202125",
+        "c-footer-gray": "#141414",
+        "c-black": "#000000",
+      },
+      backgroundColor: (theme) => theme("colors"),
+      textColor: (theme) => theme("colors"),
+
       transitionProperty: {
         height: "height",
         ease: "transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);",
@@ -60,6 +63,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-safe-area")],
-  mode: "jit",
+  plugins: [],
 };
