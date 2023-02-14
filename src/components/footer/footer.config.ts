@@ -1,4 +1,4 @@
-const navigationData = [
+const NAVIGATION_DATA = [
   {
     title: "Let's do this together",
     tags: [
@@ -101,4 +101,4 @@ const navigationData = [
   },
 ];
 
-export default navigationData;
+export default NAVIGATION_DATA;

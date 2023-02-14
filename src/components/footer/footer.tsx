@@ -6,7 +6,7 @@ import AccessibilityIcon from "../icons/accessibilityIcon";
 import LanguageIcon from "../icons/languageIcon";
 import LocationIcon from "../icons/pinIcon";
 import WoltLogo from "../icons/woltLogo";
-import navigationData from "./footer.config";
+import NAVIGATION_DATA from "./footer.config";
 
 const Footer = () => {
   return (
@@ -49,12 +49,12 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:flex gap-6 flex-[7_1_0%] justify-end max-md:hidden">
-            {navigationData.map((data) => (
+            {NAVIGATION_DATA.map((data) => (
               <Navigation {...data} />
             ))}
           </div>
           <div className="sm:flex flex-col md:hidden">
-            {navigationData.map((data) => (
+            {NAVIGATION_DATA.map((data) => (
               <EmbedNavigation {...data} />
             ))}
           </div>

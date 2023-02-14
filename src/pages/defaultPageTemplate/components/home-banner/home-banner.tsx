@@ -4,7 +4,12 @@ import FilledLocationIcon from "../../../../components/icons/filledLocationIcon"
 import LocationIcon from "../../../../components/icons/locationIcon";
 import TextAnimation from "./animation/text-animation";
 
-const HomeBanner = () => {
+interface Props {
+  color: string;
+  image: string;
+}
+
+const HomeBanner = ({ color, image }: Props) => {
   const [isFocused, setIsFocused] = useState(false);
   const [address, setAddress] = useState("");
 
@@ -14,13 +19,13 @@ const HomeBanner = () => {
   return (
     <div
       className={clsx(
-        "flex justify-center items-end h-[40rem]  xs:h-[30rem] overflow-hidden",
-        "bg-yellow"
+        "flex justify-center items-end h-[40rem] xs:h-[30rem] overflow-hidden",
+        `bg-${color}`
       )}
     >
       <div className="relative max-w-[75rem] w-full h-full flex justify-start items-end">
         <img
-          src=""
+          src={`/assets/${image}.jpg`}
           loading="lazy"
           alt="daily_image"
           className="absolute top-0 right-[-30%] w-100px min-h-full min-w-[60rem] object-cover opacity-100"

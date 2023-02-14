@@ -1,7 +1,7 @@
 import DefaultPageTemplate from "./defaultPageTemplate/page";
 import DiscoveryPageTemplate from "./discoveryPageTemplate/page";
 
-const pages = [
+const PAGES = [
   {
     title: "Default",
     route: "/en",
@@ -16,4 +16,4 @@ const pages = [
   },
 ];
 
-export default pages;
+export default PAGES;

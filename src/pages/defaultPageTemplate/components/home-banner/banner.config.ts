@@ -1,8 +1,14 @@
-const days = [
+interface BannerItem {
+  color: string;
+  image: string;
+}
+
+const BANNERS: BannerItem[] = [
   {
     color: "light-yellow",
     image: "0_Sunday",
   },
+
   {
     color: "green",
     image: "1_Monday",
@@ -29,4 +35,9 @@ const days = [
   },
 ];
 
-export default days;
+const getBannerOfToday = (): BannerItem => {
+  const dayIndex = new Date().getDay();
+  return BANNERS[dayIndex];
+};
+
+export { getBannerOfToday };

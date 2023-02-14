@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginModal from "./components/header/components/login-modal/login-modal";
-import pages from "./pages/page.config";
+import PAGES from "./pages/page.config";
 import { dispatchShowLoginModal } from "./store/actions/globalActions";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div data-testid="app" className="app">
       <BrowserRouter>
         <Routes>
-          {pages.map((page) => {
+          {PAGES.map((page) => {
             return (
               <Route
                 key={page.title}
