@@ -58,6 +58,7 @@ module.exports = {
       gridTemplateColumns: {
         auto: "repeat(auto-fill,minmax(220px,1fr))",
       },
+
       transitionProperty: {
         height: "height",
         ease: "transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);",

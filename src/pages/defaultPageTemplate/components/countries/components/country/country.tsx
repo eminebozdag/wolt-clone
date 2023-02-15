@@ -10,7 +10,7 @@ const Country = (data: Props) => {
   return (
     <a
       href={route}
-      className="relative flex items-center justify-between p-4 border-[1px] border-c-gray rounded-[4px] text-c-font-gray hover:text-c-blue hover:shadow-md ease-in duration-150"
+      className="relative flex items-center justify-between p-4 border-[1px] border-c-gray rounded-[4px] text-c-font-gray hover:text-c-blue hover:shadow-md transition ease-in duration-150"
     >
       <span className="whitespace-nowrap text-ellipsis overflow-visible">
         <span className="flex justify-start items-center">
