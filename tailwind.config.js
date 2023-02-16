@@ -7,10 +7,12 @@ module.exports = {
       sm: { min: "0px", max: "767px" },
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
-      md: { min: "768", max: "1023px" },
+      md: { min: "768px", max: "1023px" },
+      cmd: { min: "0px", max: "1023px" },
       // => @media (min-width: 768px and max-width: 1023px) { ... }
 
       lg: { min: "1024px", max: "1279px" },
+      clg: { min: "1024px", max: "1535px" },
       // => @media (min-width: 1024px and max-width: 1279px) { ... }
 
       xl: { min: "1280px", max: "1535px" },
@@ -61,7 +63,6 @@ module.exports = {
 
       transitionProperty: {
         height: "height",
-        ease: "transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);",
       },
       variants: {
         height: ["responsive", "hover", "focus"],

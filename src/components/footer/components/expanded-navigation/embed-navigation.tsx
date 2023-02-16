@@ -22,7 +22,7 @@ const EmbedNavigation = (data: Props) => {
     <nav className="flex flex-col w-full text-c-white">
       <Button
         aria-expanded={visibility}
-        className="flex w-full items-center justify-between hover:bg-c-white/20 font-medium leading-5 py-2 cursor-pointer transition 70ms ease-in 0s"
+        className="flex w-full items-center justify-between hover:bg-c-white/20 font-medium leading-5 py-2 cursor-pointer transition delay-70ms ease-in"
         onClick={handleExpand}
       >
         <div className="text-ellipsis text-xs cursor-pointer overflow-hidden ml-8">
@@ -33,11 +33,16 @@ const EmbedNavigation = (data: Props) => {
             <DownArrow
               height={18}
               width={18}
-              className="rotate-180"
+              className="rotate-180 fill-c-white"
               onClick={handleExpand}
             />
           ) : (
-            <DownArrow height={18} width={18} onClick={handleExpand} />
+            <DownArrow
+              height={18}
+              width={18}
+              onClick={handleExpand}
+              className="fill-c-white"
+            />
           )}
         </div>
       </Button>
