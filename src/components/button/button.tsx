@@ -6,6 +6,7 @@ interface Props {
   style?: React.CSSProperties;
   type?: "primary" | "secondary" | "submit";
   "aria-expanded"?: boolean;
+  tabIndex?: string;
 
   onClick?(e: any): void;
   onMouseEnter?(e: any): void;
@@ -17,6 +18,7 @@ const Button: React.FC<Props> = (props: Props) => {
     children,
     className,
     "aria-expanded": boolean,
+    tabIndex,
     style,
     type,
     onClick,
@@ -38,6 +40,7 @@ const Button: React.FC<Props> = (props: Props) => {
         ...(type && defaultStyles[type]),
         ...style,
       },
+      tabIndex,
       onClick,
       onMouseEnter,
       onMouseLeave,

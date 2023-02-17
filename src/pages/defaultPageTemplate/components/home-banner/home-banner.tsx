@@ -32,7 +32,7 @@ const HomeBanner = ({ color, image }: Props) => {
           alt="daily_banner"
           className="absolute top-0 right-[-30%] w-100px min-h-full min-w-[60rem] object-cover opacity-100"
         />
-        <div className="hidden xs:block absolute top-0 w-full h-full z-10 bg-c-gray/40"></div>
+        <div className="hidden xs:block absolute top-0 w-full h-full z-10 bg-c-font-gray/30"></div>
         <div className="relative flex flex-col justify-center h-full px-7 z-20">
           <TextAnimation />
 
@@ -52,7 +52,7 @@ const HomeBanner = ({ color, image }: Props) => {
               />
               <label
                 className={clsx(
-                  "absolute w-60 left-14 right-4 top-[0.8rem] text-c-gray-medium transition duration-120 ease-out",
+                  "pointer-events-none absolute w-60 left-14 right-4 top-[0.8rem] text-c-gray-medium transition duration-120 ease-out",
                   isFocused || address
                     ? "translate-y-[-0.5rem] text-xs"
                     : "text-base"
@@ -60,7 +60,7 @@ const HomeBanner = ({ color, image }: Props) => {
               >
                 Choose a delivery address
               </label>
-              <div className="absolute cursor-text w-6 h-6 top-4 left-5 right-auto">
+              <div className="pointer-events-none absolute cursor-text w-6 h-6 top-4 left-5 right-auto">
                 {address ? (
                   <FilledLocationIcon height={20} width={20} />
                 ) : (
