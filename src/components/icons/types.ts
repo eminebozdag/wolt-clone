@@ -3,6 +3,7 @@ interface SVGProps extends React.SVGProps<SVGSVGElement> {
   width?: number;
   className?: string;
   viewBox?: string;
+  ariaLabel?: string;
   onClick?(e: any): void;
 }
 

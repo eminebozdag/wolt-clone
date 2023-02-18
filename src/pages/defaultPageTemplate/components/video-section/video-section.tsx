@@ -31,7 +31,7 @@ const VideoSection = () => {
               >
                 <div
                   className={clsx(
-                    "flex items-center justify-center bg-c-blue cmd:bg-c-white w-15 h-15 xs:h-10 xs:w-10 rounded-full shadow-lg ",
+                    "flex items-center justify-center bg-c-blue cmd:bg-c-white w-15 h-15 xs:h-10 xs:w-10 rounded-full shadow-lg",
                     hover && "transition duration-300 ease-in-out scale-110"
                   )}
                 >
@@ -44,7 +44,7 @@ const VideoSection = () => {
             </div>
           </div>
           <div className="absolute top-0 left-0 w-full h-full my-0 mx-auto pointer-events-none">
-            <div className="absolute w-[50%] h-full right-0 bg-cover cmd:hidden bg-center bg-[url('https://consumer-static-assets.wolt.com/frontpage-assets/video-cover-image-4.jpg')]"></div>
+            <div className="absolute w-[50%]  h-full right-0  bg-cover cmd:hidden bg-center bg-[url('https://consumer-static-assets.wolt.com/frontpage-assets/video-cover-image-4.jpg')]"></div>
             <video
               className="relative w-full h-full object-cover top-0 left-[50%] 
               transition transform duration-75 ease-[cubic-bezier(0.17, 0.67, 0.24, 0.99)] delay-[0ms]"
@@ -52,6 +52,7 @@ const VideoSection = () => {
               playsInline
               poster="https://consumer-static-assets.wolt.com/frontpage-assets/video-cover-image-4.jpg"
               tabIndex={-1}
+              src="https://consumer-static-assets.wolt.com/frontpage-assets/Wolt_Brand_Film_2020.mp4"
             ></video>
           </div>
         </div>

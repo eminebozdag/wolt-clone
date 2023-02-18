@@ -1,5 +1,6 @@
 import Layout from "../../components/layout/layout";
 import Countries from "./components/countries/countries";
+import DownloadApp from "./components/download-app/download-app";
 import { getBannerOfToday } from "./components/home-banner/banner.config";
 import HomeBanner from "./components/home-banner/home-banner";
 import Title from "./components/title/title";
@@ -15,6 +16,7 @@ const DefaultPageTemplate = () => {
           <Countries />
           <VideoSection />
           <Title />
+          <DownloadApp />
         </div>
       </main>
     </Layout>
