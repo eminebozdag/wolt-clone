@@ -5,7 +5,7 @@ interface BannerItem {
 
 const BANNERS: BannerItem[] = [
   {
-    color: "bg-light-yellow",
+    color: "bg-c-light-yellow",
     image: "0_Sunday",
   },
 

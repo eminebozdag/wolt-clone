@@ -1,4 +1,5 @@
 import Layout from "../../components/layout/layout";
+import ApplyJobCarousel from "./components/carousel/apply-job-carousel";
 import Countries from "./components/countries/countries";
 import DownloadApp from "./components/download-app/download-app";
 import { getBannerOfToday } from "./components/home-banner/banner.config";
@@ -17,6 +18,8 @@ const DefaultPageTemplate = () => {
           <VideoSection />
           <Title />
           <DownloadApp />
+          <ApplyJobCarousel />
+          <div className="pb-[12.5rem]"></div>
         </div>
       </main>
     </Layout>
