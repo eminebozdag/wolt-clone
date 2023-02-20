@@ -1,5 +1,5 @@
 import SVGProps from "./types";
-const DownArrow = ({
+const DownArrow: React.FC<SVGProps> = ({
   height,
   width,
   className,

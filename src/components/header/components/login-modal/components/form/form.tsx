@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React, { useState } from "react";
-import Button from "../../../../../button/button";
+import Button from "../../../../../button";
 
 const Form = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -22,7 +22,7 @@ const Form = () => {
   };
 
   const handleSubmit = (e: any) => {
-    isValidEmail(email) ? console.log("success status") : setIsFocused(true);
+    isValidEmail(email) ? alert("success status") : setIsFocused(true);
     e.preventDefault();
   };
 
@@ -54,8 +54,8 @@ const Form = () => {
         )}
       </div>
       <Button
-        type="submit"
-        className="bg-c-blue mt-4 rounded-lg py-4 font-semibold text-c-white hover:bg-c-blue/90"
+        variant="primary"
+        className="justify-center mt-4 py-4 font-semibold text-c-white"
       >
         Next
       </Button>

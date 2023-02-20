@@ -1,4 +1,4 @@
-import WoltLogo from "../icons/woltLogo";
+import WoltLogo from "../icons/wolt-logo";
 import Login from "./components/login";
 
 const Header = () => {

@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      xs: { min: "0px", max: "639px" },
-      sm: { min: "0px", max: "767px" },
+      xs: { min: "1px", max: "639px" },
+      sm: { min: "1px", max: "767px" },
       csm: { min: "640px", max: "767px" },
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
@@ -24,7 +25,7 @@ module.exports = {
     },
 
     fontSize: {
-      xxs: ["11px"],
+      xxs: ["10px"],
       xs: ["12px"],
       sm: ["14px", "20px"],
       base: ["16px", "24px"],

@@ -1,11 +1,11 @@
 import React from "react";
-import Button from "../button/button";
+import Button from "../button";
 import EmbedNavigation from "../footer/components/expanded-navigation/embed-navigation";
 import Navigation from "../footer/components/navigation/navigation";
-import AccessibilityIcon from "../icons/accessibilityIcon";
-import LanguageIcon from "../icons/languageIcon";
-import LocationIcon from "../icons/pinIcon";
-import WoltLogo from "../icons/woltLogo";
+import AccessibilityIcon from "../icons/accessibility-icon";
+import LanguageIcon from "../icons/language-icon";
+import LocationIcon from "../icons/pin-icon";
+import WoltLogo from "../icons/wolt-logo";
 import NAVIGATION_DATA from "./footer.config";
 
 const Footer = () => {
@@ -59,45 +59,30 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-row sm:flex-col justify-between gap-4 px-8 text-xs md:text-xxs sm:text-xxs ">
+        <div className="flex flex-row sm:flex-col justify-between  px-8 text-xs md:text-xxs sm:text-xxs ">
           <div className="flex flex-row gap-4">
-            <Button
-              aria-label="Change country"
-              className="flex items-center gap-1 text-c-white text-start cursor-pointer hover:underline"
-            >
-              <div className="h-4 w-4 overflow-hidden">
-                <div className="flex items-center justify-center w-full h-full ">
-                  <LocationIcon height={10} width={10} />
-                </div>
+            <Button className="p-0 gap-1 text-c-white text-start hover:underline">
+              <div className="flex items-center justify-center h-4 w-4 ">
+                <LocationIcon height={10} width={10} />
               </div>
               Germany
             </Button>
 
-            <Button
-              aria-label="Change language"
-              className="flex items-center gap-1 text-c-white text-start cursor-pointer hover:underline"
-            >
-              <div className="h-4 w-4 overflow-hidden">
-                <div className="flex items-center justify-center w-full h-full">
-                  <LanguageIcon height={10} width={10} />
-                </div>
+            <Button className="p-0 gap-1 text-c-white text-start hover:underline">
+              <div className="flex items-center justify-center h-4 w-4">
+                <LanguageIcon height={10} width={10} />
               </div>
               English
             </Button>
 
-            <Button
-              aria-label="Open accessibility settings"
-              className="flex items-center gap-1 text-c-white text-start cursor-pointer hover:underline"
-            >
-              <div className="h-4 w-4 overflow-hidden">
-                <div className="flex items-center justify-center w-full h-full">
-                  <AccessibilityIcon height={10} width={10} />
-                </div>
+            <Button className="p-0 gap-1 text-c-white text-start cursor-pointer hover:underline">
+              <div className="flex items-center justify-center h-4 w-4">
+                <AccessibilityIcon height={10} width={10} />
               </div>
               Accessibility
             </Button>
           </div>
-          <div className="flex flex-row flex-wrap justify-between gap-x-6 gap-y-2 text-c-white ">
+          <div className="flex flex-row flex-wrap justify-between items-center gap-x-6 gap-y-2 text-c-white ">
             <nav className="flex justify-between gap-6 items-center sm:text-c-white/75">
               <a
                 href="https://explore.wolt.com/en/deu/accessibility-statement"

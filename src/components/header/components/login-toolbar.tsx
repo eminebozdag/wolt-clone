@@ -1,5 +1,6 @@
 import { CSSTransition } from "react-transition-group";
-import Button from "../../button/button";
+import Button from "../../button";
+import TriangleIcon from "../../icons/triangle-icon";
 
 interface Props {
   onLogin?(e: any): void;
@@ -15,22 +16,9 @@ const LoginToolbar = ({ onLogin, show, onClose }: Props) => {
       timeout={300}
       classNames="modal-fade"
     >
-      <div
-        role="dialog"
-        className="absolute top-[3.1rem] left-[-125px] opacity-100 bg-c-white rounded-lg z-50"
-        onClick={onClose}
-      >
-        <div
-          aria-hidden="true"
-          className="absolute w-4 h-2 top-[-7.7px] right-5 z-10"
-        >
-          <svg viewBox="0 0 32 16" className="fill-c-white">
-            <path
-              d="M 16,0 L32,16 H0 Z"
-              className="drop-shadow-2xl fill-c-gray"
-            ></path>
-            <path d="M 16,1 L31,16 H1 Z"></path>
-          </svg>
+      <div className="opacity-100 bg-c-white rounded-lg z-50" onClick={onClose}>
+        <div className="absolute w-4 h-2 top-[-7.7px] right-5 z-10">
+          <TriangleIcon className="fill-c-white" />
         </div>
 
         <div className="relative bg-c-white z-0 rounded-lg min-h-[1.75rem] drop-shadow-2xl">

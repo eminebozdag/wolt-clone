@@ -7,7 +7,6 @@ const AppleStoreIcon = ({ height, width, className, ...props }: SVGProps) => {
       width={width}
       height={height}
       viewBox="0 0 119.664 40"
-      ariaLabel="Download the Wolt iOS app on the App Store"
       {...props}
       className={className}
     >

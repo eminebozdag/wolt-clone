@@ -1,21 +1,22 @@
-import Button from "../../../../../button/button";
+import Button from "../../../../../button";
 
 interface Props {
   Component?: React.ReactNode;
   text?: string;
   style?: string;
+  type?: "primary" | "secondary" | "outline";
 }
 
-const SocialLogin = ({ Component, text, style }: Props) => {
+const SocialLogin = ({ Component, text, style, type }: Props) => {
   return (
-    <Button className="relative mt-2">
-      <div className={style}>
+    <div className="relative mt-2">
+      <Button variant={type} className={style}>
         <div className="flex flex-row items-center">
           <div className="flex">{Component}</div>
           <div className="absolute w-[90%]">{text}</div>
         </div>
-      </div>
-    </Button>
+      </Button>
+    </div>
   );
 };
 export default SocialLogin;

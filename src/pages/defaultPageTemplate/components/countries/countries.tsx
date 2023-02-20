@@ -1,5 +1,5 @@
-import Country from "./components/country/country";
 import COUNTRIES from "./countries.config";
+import Country from "./country/country";
 const Countries = () => {
   return (
     <section className="flex flex-col w-full max-w-[1200px] m-auto py-32 px-8 md:py-20 sm:py-12 bg-c-white">

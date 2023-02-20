@@ -1,4 +1,4 @@
-import DownArrow from "../../../../../../components/icons/downArrow";
+import DownArrow from "../../../../../components/icons/down-arrow";
 
 interface Props {
   country?: string;

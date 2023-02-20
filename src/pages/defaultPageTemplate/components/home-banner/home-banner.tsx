@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { useState } from "react";
-import FilledLocationIcon from "../../../../components/icons/filledLocationIcon";
-import LocationIcon from "../../../../components/icons/locationIcon";
+import FilledLocationIcon from "../../../../components/icons/filled-location-icon";
+import LocationIcon from "../../../../components/icons/location-icon";
 import TextAnimation from "./animation/text-animation";
 
 interface Props {
