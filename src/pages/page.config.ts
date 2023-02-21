@@ -4,7 +4,7 @@ import DiscoveryPageTemplate from "./discoveryPageTemplate/page";
 const PAGES = [
   {
     title: "Default",
-    route: "/en",
+    route: "/",
     exact: true,
     Component: DefaultPageTemplate,
   },

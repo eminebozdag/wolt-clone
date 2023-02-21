@@ -9,6 +9,10 @@ function App() {
   const { showLoginModal } = useSelector((state: any) => state.globalReducer);
   const dispatch = useDispatch();
 
+  const handleDispatch = () => {
+    dispatch(dispatchShowLoginModal(false));
+  };
+
   return (
     <div data-testid="app" className="app">
       <BrowserRouter>
@@ -25,9 +29,7 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      {showLoginModal && (
-        <LoginModal onClose={() => dispatch(dispatchShowLoginModal(false))} />
-      )}
+      {showLoginModal && <LoginModal onClickAway={handleDispatch} />}
     </div>
   );
 }
