@@ -2,6 +2,7 @@ import SVGProps from "./types";
 const DownArrow: React.FC<SVGProps> = ({
   height,
   width,
+  color,
   className,
   onClick,
   ...props
@@ -9,7 +10,7 @@ const DownArrow: React.FC<SVGProps> = ({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="clightgray"
+      fill="c-light-gray"
       width={width}
       height={height}
       viewBox="0 0 24 24"

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
-import Button from "../../../button";
-import DownArrow from "../../../icons/down-arrow";
+import Button from "../../button";
+import DownArrow from "../../icons/down-arrow";
 
 interface Props {
   title?: string;
@@ -16,26 +16,27 @@ const EmbedNavigation = (data: Props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <nav className="flex flex-col w-full text-c-white">
+    <nav className="flex flex-col w-full ">
       <Button
-        className="hover:bg-c-white/20 rounded-none font-medium leading-5 py-2 transition delay-70ms ease-in"
+        variant="secondary"
+        className="rounded-none text-c-white py-2 delay-70ms"
+        hover
         onClick={() => {
           setIsExpanded(!isExpanded);
         }}
       >
-        <div className="flex flex-row w-full justify-between px-4">
-          <div className="text-ellipsis text-xs cursor-pointer overflow-hidden">
+        <div className="flex flex-row w-full justify-between px-8">
+          <span className="text-ellipsis text-xs cursor-pointer overflow-hidden">
             {data.title}
-          </div>
-          <div className="">
-            {
-              <DownArrow
-                height={18}
-                width={18}
-                className={clsx("fill-c-white", isExpanded ? "rotate-180" : "")}
-              />
-            }
-          </div>
+          </span>
+
+          {
+            <DownArrow
+              height={18}
+              width={18}
+              className={clsx("fill-c-white", isExpanded ? "rotate-180" : "")}
+            />
+          }
         </div>
       </Button>
       <div

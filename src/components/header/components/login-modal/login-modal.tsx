@@ -1,56 +1,58 @@
 import React from "react";
-import { CSSTransition } from "react-transition-group";
+import ClickAwayListener from "react-click-away-listener";
 import Button from "../../../button";
 import CloseIcon from "../../../icons/close-icon";
-import Form from "./components/form/form";
-import SocialLogin from "./components/social-login/social-login";
-import social_logins from "./components/social-login/social.login.config";
+import Form from "./components/form";
+import social_logins from "./components/social.login.config";
 interface Props {
-  onClose?(e: any): void;
-  show: boolean;
+  onClose?(): void;
+  onClickAway?(): void;
 }
 
-const LoginModal = ({ onClose, show }: Props) => {
+const LoginModal = (props: Props) => {
+  const { onClose } = props;
   return (
-    <CSSTransition
-      in={show}
-      unmountOnExit
-      timeout={300}
-      classNames="modal-fade"
-    >
-      <div className="fixed flex items-center justify-center w-full h-full z-40 top-0 bg-c-font-gray/60">
+    <div className="fixed flex items-center justify-center w-full h-full z-40 top-0 bg-c-font-gray/60">
+      <ClickAwayListener onClickAway={() => onClose}>
         <div className="fixed xs:absolute xs:bottom-0 xs:right-0 xs:left-0 bg-c-white shadow-[rgba(0,0,0,0.2)_0px_7px_29px_0px] rounded-2xl z-20">
           <div className="w-[100vw] max-w-lg">
-            <div className="relative w-full h-20 xs:w-[100vw]">
+            <div className="relative w-full h-20 xs:w-[100vw] xs:h-16">
               <div className="absolute right-4 top-4">
                 <Button
-                  variant="secondary"
+                  variant="FAB"
                   onClick={onClose}
-                  className="justify-center rounded-full bg-c-gray-light transition duration-120 ease-out hover:ease-in hover:bg-c-gray"
+                  className="xs:p-2"
+                  hover
                 >
                   <CloseIcon height={20} width={20} fill={"footer-c-gray"} />
                 </Button>
               </div>
             </div>
-            <div className="px-4 xs:w-[100vw]">
+            <div className="px-4 ">
               <div className="flex flex-col justify-between">
                 <div className="mb-6">
                   <h2 className="text-[2rem] font-header font-[800] mb-3 xs:text-[1.5rem]">
                     Create an account or log in
                   </h2>
-                  <div className="text-base text-c-font-gray">
+                  <div className="text-base text-c-font-gray xs:text-xs">
                     Log in below or create a new Wolt account.
                   </div>
                 </div>
                 <div className="flex flex-col text-base sm:text-sm">
                   {social_logins.map((social) => {
                     return (
-                      <SocialLogin
-                        Component={<social.Component width={16} />}
-                        type={"outline"}
-                        text={social.text}
-                        style={social.style}
-                      />
+                      <div className="relative mt-2">
+                        <Button variant={"outline"} className={social.style}>
+                          <div className="flex flex-row items-center">
+                            <div className="flex">
+                              {<social.Component height={14} width={14} />}
+                            </div>
+                            <div className="absolute w-[90%]">
+                              {social.text}
+                            </div>
+                          </div>
+                        </Button>
+                      </div>
                     );
                   })}
 
@@ -62,10 +64,9 @@ const LoginModal = ({ onClose, show }: Props) => {
                     <hr className="flex grow shrink basis-auto border-c-gray"></hr>
                   </div>
                   <Form />
-                  <span className="text-c-gray-medium text-xs leading-4 py-4">
+                  <span className="text-c-gray-medium text-xs leading-4 py-4 xs:text-xxs">
                     {"Please visit  "}
                     <a
-                      font-family="default"
                       href="https://explore.wolt.com/en/deu/privacy"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -77,7 +78,6 @@ const LoginModal = ({ onClose, show }: Props) => {
                       "  to learn more about personal data processing at Wolt. You can access the local Privacy Statement related to your Wolt account after you have provided the country and language preferences applicable to you during registration. This site is protected by hCaptcha. The hCaptcha "
                     }
                     <a
-                      font-family="default"
                       href="https://hcaptcha.com/privacy"
                       target="_blank"
                       rel="noreferrer"
@@ -87,7 +87,6 @@ const LoginModal = ({ onClose, show }: Props) => {
                     </a>
                     {" and "}
                     <a
-                      font-family="default"
                       href="https://hcaptcha.com/terms"
                       target="_blank"
                       rel="noreferrer"
@@ -102,8 +101,8 @@ const LoginModal = ({ onClose, show }: Props) => {
             </div>
           </div>
         </div>
-      </div>
-    </CSSTransition>
+      </ClickAwayListener>
+    </div>
   );
 };
 

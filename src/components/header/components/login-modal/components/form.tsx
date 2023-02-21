@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React, { useState } from "react";
-import Button from "../../../../../button";
+import Button from "../../../../button";
 
 const Form = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -54,8 +54,9 @@ const Form = () => {
         )}
       </div>
       <Button
+        hover
         variant="primary"
-        className="justify-center mt-4 py-4 font-semibold text-c-white"
+        className="justify-center mt-4 py-4 font-semibold"
       >
         Next
       </Button>

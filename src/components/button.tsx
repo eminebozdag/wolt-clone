@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 interface Props {
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "FAB" | "flat";
   hover?: boolean;
 
   children?: any;
@@ -18,17 +18,19 @@ const Button: React.FC<Props> = (props: Props) => {
   const { variant, className, hover, children } = props;
   const styles = {
     primary: clsx(
-      "text-[1rem] text-c-white bg-c-blue font-bold",
-      hover && "hover:bg-c-blue/10"
+      "justify-center text-[1rem] text-c-white bg-c-blue font-bold px-[1rem] min-h-[2.875rem]",
+      hover && "hover:bg-c-blue/90"
     ),
     secondary: clsx(
-      "text-[0.875rem] text-c-font-gray font-medium",
-      hover && "hover:bg-c-font-gray/5"
+      "justify-center text-[0.875rem] font-medium",
+      hover && "hover:bg-c-white/20 "
     ),
-    outline: clsx(
-      "w-full border-2 font-normal p-4 transition duration-120 ease-out",
-      hover && "hover:ease-in"
+    outline: clsx("w-full border-2 font-normal p-4"),
+    FAB: clsx(
+      "justify-center rounded-full bg-c-gray-light p-4",
+      hover && "hover:bg-c-gray"
     ),
+    flat: clsx("p-0 gap-1 text-c-white text-start hover:underline"),
   };
 
   return React.createElement(
@@ -36,7 +38,7 @@ const Button: React.FC<Props> = (props: Props) => {
     {
       ...props,
       className: clsx(
-        "flex items-center min-h-[2.875rem] p-[1rem] whitespace-nowrap rounded-lg cursor-pointer",
+        "flex items-center  whitespace-nowrap rounded-lg cursor-pointer transition duration-120 ease-out hover:ease-in",
         variant && styles[variant],
         className
       ),

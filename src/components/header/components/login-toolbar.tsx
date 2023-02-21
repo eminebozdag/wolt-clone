@@ -3,8 +3,9 @@ import Button from "../../button";
 import TriangleIcon from "../../icons/triangle-icon";
 
 interface Props {
-  onLogin?(e: any): void;
   show: boolean;
+
+  onLogin?(e: any): void;
   onClose?(e: any): void;
 }
 

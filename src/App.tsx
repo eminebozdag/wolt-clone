@@ -25,10 +25,9 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      <LoginModal
-        onClose={() => dispatch(dispatchShowLoginModal(false))}
-        show={showLoginModal}
-      />
+      {showLoginModal && (
+        <LoginModal onClose={() => dispatch(dispatchShowLoginModal(false))} />
+      )}
     </div>
   );
 }

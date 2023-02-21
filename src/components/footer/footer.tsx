@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../button";
-import EmbedNavigation from "../footer/components/expanded-navigation/embed-navigation";
-import Navigation from "../footer/components/navigation/navigation";
 import AccessibilityIcon from "../icons/accessibility-icon";
 import LanguageIcon from "../icons/language-icon";
 import LocationIcon from "../icons/pin-icon";
 import WoltLogo from "../icons/wolt-logo";
+import EmbedNavigation from "./components/embed-navigation";
+import Navigation from "./components/navigation";
 import NAVIGATION_DATA from "./footer.config";
 
 const Footer = () => {
@@ -14,13 +14,7 @@ const Footer = () => {
       <div className="flex flex-col max-w-[1140px] m-auto">
         <div className="flex-1 flex flex-row sm:flex-col justify-between gap-8 mb-20">
           <div className="flex flex-col flex-[2_1_0%] px-8">
-            <WoltLogo
-              color={"white"}
-              height={26}
-              width={72}
-              viewBox="0 0 64 24"
-              className="mb-7"
-            />
+            <WoltLogo color={"white"} height={26} width={72} className="mb-7" />
             <div className="flex sm:flex-nowrap flex-wrap gap-3">
               <a
                 href="https://apps.apple.com/fi/app/wolt/id943905271?af_adset=wolt&af_keywords=wolt&af_sub1=https%3A%2F%2Fwww.google.com%2F&af_sub2=%2Fen%2Fdeu%2Fberlin&c=DEU_Web_FTU_Search_Brand_Berlin_EN&pid=google"
@@ -59,23 +53,23 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-row sm:flex-col justify-between  px-8 text-xs md:text-xxs sm:text-xxs ">
+        <div className="flex flex-row sm:flex-col justify-between px-8 gap-y-2 text-xs cmd:text-xxs ">
           <div className="flex flex-row gap-4">
-            <Button className="p-0 gap-1 text-c-white text-start hover:underline">
-              <div className="flex items-center justify-center h-4 w-4 ">
+            <Button variant="flat">
+              <div className="flex items-center justify-center h-4 w-4">
                 <LocationIcon height={10} width={10} />
               </div>
               Germany
             </Button>
 
-            <Button className="p-0 gap-1 text-c-white text-start hover:underline">
+            <Button variant="flat">
               <div className="flex items-center justify-center h-4 w-4">
                 <LanguageIcon height={10} width={10} />
               </div>
               English
             </Button>
 
-            <Button className="p-0 gap-1 text-c-white text-start cursor-pointer hover:underline">
+            <Button variant="flat">
               <div className="flex items-center justify-center h-4 w-4">
                 <AccessibilityIcon height={10} width={10} />
               </div>

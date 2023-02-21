@@ -10,7 +10,7 @@ const Login = () => {
   const [popover, setPopover] = useState(false);
   const dispatch = useDispatch();
 
-  const handleLogin = (e: any) => {
+  const handleLogin = () => {
     dispatch(dispatchShowLoginModal(true));
     setPopover(false);
   };
