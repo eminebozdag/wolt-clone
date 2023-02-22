@@ -12,7 +12,7 @@ interface Object {
   tag_title?: string;
   route?: string;
 }
-const EmbedNavigation = (data: Props) => {
+const AccordionNavigation = (data: Props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -63,4 +63,4 @@ const EmbedNavigation = (data: Props) => {
     </nav>
   );
 };
-export default EmbedNavigation;
+export default AccordionNavigation;

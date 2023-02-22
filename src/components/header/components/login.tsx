@@ -37,7 +37,6 @@ const Login = () => {
                 className="bg-c-white border-2 border-c-white rounded-full"
               />
             }
-            className=""
             open={popover}
             onClickAway={() => setPopover(false)}
             onClick={() => setPopover(!popover)}

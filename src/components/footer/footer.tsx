@@ -4,7 +4,7 @@ import AccessibilityIcon from "../icons/accessibility-icon";
 import LanguageIcon from "../icons/language-icon";
 import LocationIcon from "../icons/pin-icon";
 import WoltLogo from "../icons/wolt-logo";
-import EmbedNavigation from "./components/embed-navigation";
+import AccordionNavigation from "./components/accordion-nav";
 import Navigation from "./components/navigation";
 import NAVIGATION_DATA from "./footer.config";
 
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           <div className="sm:flex flex-col md:hidden">
             {NAVIGATION_DATA.map((data) => (
-              <EmbedNavigation {...data} />
+              <AccordionNavigation {...data} />
             ))}
           </div>
         </div>
