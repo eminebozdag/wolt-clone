@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="flex flex-col max-w-[1140px] m-auto">
         <div className="flex-1 flex flex-row sm:flex-col justify-between gap-8 mb-20">
           <div className="flex flex-col flex-[2_1_0%] px-8">
-            <WoltLogo color={"white"} height={26} width={72} className="mb-7" />
+            <WoltLogo color="white" height={26} width={72} className="mb-7" />
             <div className="flex sm:flex-nowrap flex-wrap gap-3">
               <a
                 href="https://apps.apple.com/fi/app/wolt/id943905271?af_adset=wolt&af_keywords=wolt&af_sub1=https%3A%2F%2Fwww.google.com%2F&af_sub2=%2Fen%2Fdeu%2Fberlin&c=DEU_Web_FTU_Search_Brand_Berlin_EN&pid=google"

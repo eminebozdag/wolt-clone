@@ -2,15 +2,18 @@ import clsx from "clsx";
 import { useState } from "react";
 import Button from "../../../../components/button";
 import PlayIcon from "../../../../components/icons/play-icon";
+import ShadowBackground from "../../../../components/shadow-background";
+
 const VideoSection = () => {
   const [hover, setHover] = useState(false);
   return (
     <div className="relative items-center w-full h-[46rem] pb-[90px] lg:h-[40rem] md:h-[34rem] csm:h-[34rem] xs:h-[20rem] lg:pb-0 cmd:pb-0 mt-[6rem] bg-c-white bg-[linear-gradient(#ffff_50%,#EEEEEE_50%)] ">
-      <div className="max-w-[1184px] h-full my-0 mx-auto bg-c-blue shadow-[rgba(0,0,0,0.05)_0px_0px_50px_0px]">
+      <div className="max-w-[1184px] h-full my-0 mx-auto shadow-[rgba(0,0,0,0.05)_0px_0px_50px_0px]">
         <div className="flex relative h-full w-full text-start overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-cover cmd:bg-cover bg-[url('https://consumer-static-assets.wolt.com/frontpage-assets/video-cover-image-4.jpg')]"></div>
           <div className="flex max-w-[50%] h-full bg-cover bg-center max-lg:bg-transparent">
-            <div className="absolute top-0 right-0 w-full h-full hidden cmd:block cmd:bg-c-font-gray/30"></div>
+            <ShadowBackground type="default" className="cmd:block" />
+
             <div className="relative flex flex-col justify-center flex-1 bg-c-white cmd:bg-transparent p-20">
               <h2 className="font-header font-[600] text-lg mb-16 items-start cmd:text-c-white cmd:flex-1 xs:text-sm">
                 What is Wolt?
@@ -23,7 +26,7 @@ const VideoSection = () => {
                 you want. Delivered to you – quickly, reliably and affordably.
               </p>
               <Button
-                className="flex mr-auto "
+                className="flex mr-auto"
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
               >
@@ -43,7 +46,7 @@ const VideoSection = () => {
           </div>
 
           <div className="absolute top-0 left-0 w-full h-full my-0 mx-auto cmd:hidden pointer-events-none">
-            <div className="absolute w-[50%] h-full right-0  bg-cover  bg-center bg-[url('https://consumer-static-assets.wolt.com/frontpage-assets/video-cover-image-4.jpg')]"></div>
+            <div className="absolute w-[50%] h-full right-0 bg-cover bg-center bg-[url('https://consumer-static-assets.wolt.com/frontpage-assets/video-cover-image-4.jpg')]"></div>
             <video
               className="relative w-full h-full object-cover top-0 left-[50%] 
               transition transform duration-75 ease-[cubic-bezier(0.17, 0.67, 0.24, 0.99)] delay-[0ms]"

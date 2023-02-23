@@ -40,7 +40,7 @@ const Input: React.FC<Props> = (props: Props) => {
       {label && (
         <label
           className={clsx(
-            "absolute top-[0.8rem] px-4 text-c-gray-medium pointer-events-none transition duration-100 ease-out",
+            "absolute top-[0.7rem] px-4 text-c-gray-medium pointer-events-none transition duration-100 ease-out",
             isFocused || value ? "translate-y-[-0.5rem] text-xs" : "text-base",
             start && "left-9"
           )}

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import FilledLocationIcon from "../../../../components/icons/filled-location-icon";
 import LocationIcon from "../../../../components/icons/location-icon";
 import Input from "../../../../components/input";
+import ShadowBackground from "../../../../components/shadow-background";
 import TextAnimation from "./animation/text-animation";
 interface Props {
   color: string;
@@ -26,15 +27,16 @@ const HomeBanner = ({ color, image }: Props) => {
           alt="daily_banner"
           className="absolute top-0 right-[-30%] w-100px min-h-full min-w-[60rem] object-cover opacity-100"
         />
-        <div className="hidden xs:block absolute top-0 w-full h-full z-10 bg-c-font-gray/30"></div>
-        <div className="relative flex flex-col justify-center h-full px-7 z-20">
+        <ShadowBackground type="default" className="xs:block" />
+
+        <div className="relative flex flex-col justify-center h-full px-7 z-20 xs:px-2 min-w-[16rem]">
           <TextAnimation />
 
           <label className="font-header font-[600] text-lg xs:text-c-white xs:text-base mb-4">
             Delivery address
           </label>
 
-          <div className="relative flex flex-col">
+          <div className="relative flex flex-col ">
             <Input
               label="Choose a delivery address"
               type="text"

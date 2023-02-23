@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginModal from "./components/header/components/login-modal/login-modal";
+import ShadowBackground from "./components/shadow-background";
 import PAGES from "./pages/page.config";
 import { dispatchShowLoginModal } from "./store/actions/globalActions";
 
 function App() {
   const { showLoginModal } = useSelector((state: any) => state.globalReducer);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    showLoginModal && (document.body.style.overflow = "hidden");
+    return () => {
+      document.body.style.overflow = "scroll";
+    };
+  });
 
   const handleDispatch = () => {
     dispatch(dispatchShowLoginModal(false));
@@ -29,7 +37,11 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      {showLoginModal && <LoginModal onClickAway={handleDispatch} />}
+      {showLoginModal && (
+        <ShadowBackground type="modal">
+          <LoginModal onClickAway={handleDispatch} />
+        </ShadowBackground>
+      )}
     </div>
   );
 }
