@@ -12,6 +12,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Open Sans",
+    "Helvetica Neue", sans-serif;
 }

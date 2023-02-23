@@ -2,7 +2,7 @@ import Layout from "../../components/layout";
 const DiscoveryPageTemplate = () => {
   return (
     <Layout>
-      <div>discovery page template</div>
+      <div>DiscoveryPageTemplate</div>
     </Layout>
   );
 };
