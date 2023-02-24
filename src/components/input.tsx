@@ -49,7 +49,7 @@ const Input: React.FC<Props> = (props: Props) => {
         </label>
       )}
       <div className="flex px-4 cursor-text items-center">
-        {hasIcon && <div className="mr-4"> {startIcon}</div>}
+        {hasIcon && <div className="mr-4">{startIcon}</div>}
         <input
           className={clsx("w-full pt-5 pb-1 focus:outline-none", className)}
           type={type}

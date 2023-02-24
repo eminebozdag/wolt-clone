@@ -7,6 +7,7 @@ module.exports = {
       xs: { min: "1px", max: "639px" },
       sm: { min: "1px", max: "767px" },
       csm: { min: "640px", max: "767px" },
+      mobile: { min: "640px" },
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
       md: { min: "768px", max: "1023px" },

@@ -7,7 +7,7 @@ interface Props {
 const Card = (data: Props) => {
   const { title, image, route } = data;
   return (
-    <div className="flex flex-1  flex-col text-center bg-c-section-gray cmd:mb-4 ">
+    <div className="flex flex-1 flex-col text-center bg-c-section-gray cmd:mb-4 ">
       <img
         src={`/assets/card-images/${image}.jpg`}
         loading="lazy"

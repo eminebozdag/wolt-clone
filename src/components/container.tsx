@@ -1,9 +1,19 @@
+import clsx from "clsx";
 interface Props {
   children?: any;
+  className?: string;
 }
 
-const Container = ({ children }: Props) => {
-  return <div className="px-[105.5px]">{children}</div>;
+const Container = (props: Props) => {
+  const { children, className } = props;
+
+  return (
+    <div
+      className={clsx("max-w-[1200px] px-[16px] mobile:px-[30px]", className)}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Container;
