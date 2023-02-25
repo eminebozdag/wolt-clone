@@ -16,27 +16,40 @@ const HomeBanner = ({ color, image }: Props) => {
   return (
     <div
       className={clsx(
-        "flex justify-center items-end h-[40rem] sm:h-[36rem] overflow-hidden",
+        "flex justify-center items-end overflow-hidden",
+        "h-[560px] tabletL:h-[40rem]",
         color
       )}
     >
-      <div className="relative max-w-[75rem] w-full h-full flex justify-start items-end">
+      <div className="relative flex justify-start items-end w-full h-full max-w-[75rem]">
         <img
           src={`/assets/banner-images/${image}.jpg`}
           loading="lazy"
           alt="daily_banner"
-          className="absolute top-0 right-[-30%] w-100px min-h-full min-w-[60rem] object-cover opacity-100"
+          className="absolute top-0 min-w-[50rem] right-[-40%] mobile:left-[30%]"
         />
-        <ShadowBackground type="default" className="xs:block" />
+        <ShadowBackground type="default" className="mobile:hidden" />
 
-        <div className="relative flex flex-col justify-center h-full px-7 z-20 xs:px-2 min-w-[16rem]">
+        <div
+          className={clsx(
+            "relative flex flex-col justify-center h-full min-w-[465px] z-20",
+            "px-4 mobile:px-[30px]"
+          )}
+        >
           <TextAnimation />
 
-          <label className="font-header font-[600] text-lg xs:text-c-white xs:text-base mb-4">
+          <label
+            className={clsx(
+              "font-header font-[600]",
+              "mb-[14px] tabletL:mb-4",
+              "text-base mobile:text-md",
+              "text-c-white mobile:text-c-font-gray"
+            )}
+          >
             Delivery address
           </label>
 
-          <div className="relative flex flex-col ">
+          <div className="relative flex flex-col">
             <Input
               label="Choose a delivery address"
               type="text"

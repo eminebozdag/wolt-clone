@@ -36,12 +36,21 @@ const Input: React.FC<Props> = (props: Props) => {
 
   // console.log(hasIcon, hasMultipleIcon, startIcon);
   return (
-    <div className="relative w-full bg-c-white rounded-lg truncate overflow-hidden border-2 border-c-gray hover:border-c-blue focus:outline-none focus:border-[2px] focus:border-c-blue active:border-c-blue transition duration-300 ease-out">
+    <div
+      className={clsx(
+        "relative w-full bg-c-white rounded-lg truncate overflow-hidden",
+        "border-2 border-c-gray",
+        "focus:outline-none focus:border-[2px] focus:border-c-blue",
+        "hover:border-c-bluactive:border-c-blue",
+        "transition duration-300 ease-in-out"
+      )}
+    >
       {label && (
         <label
           className={clsx(
-            "absolute top-[0.7rem] px-4 text-c-gray-medium pointer-events-none transition duration-100 ease-out",
-            isFocused || value ? "translate-y-[-0.5rem] text-xs" : "text-base",
+            "absolute top-[0.8rem] px-4 text-c-gray-medium pointer-events-none",
+            "transition duration-100 ease-out",
+            isFocused || value ? "translate-y-[-0.7rem] text-xxs" : "text-sm",
             start && "left-9"
           )}
         >
@@ -51,7 +60,10 @@ const Input: React.FC<Props> = (props: Props) => {
       <div className="flex px-4 cursor-text items-center">
         {hasIcon && <div className="mr-4">{startIcon}</div>}
         <input
-          className={clsx("w-full pt-5 pb-1 focus:outline-none", className)}
+          className={clsx(
+            "w-full py-6 pb-1 text-c-font-gray text-sm focus:outline-none",
+            className
+          )}
           type={type}
           value={value}
           onFocus={() => setIsFocused(true)}

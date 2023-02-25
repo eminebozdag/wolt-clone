@@ -8,7 +8,7 @@ const ShadowBackground = (props: Props) => {
   const { className, children, type } = props;
   const styles = {
     modal: clsx("fixed flex items-center justify-center z-40"),
-    default: clsx("absolute hidden"),
+    default: clsx("absolute block"),
   };
   return (
     <div

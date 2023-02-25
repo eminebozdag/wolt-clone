@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import ReactTextTransition from "react-text-transition";
 import TEXTS from "./text.config";
@@ -10,7 +11,15 @@ const TextAnimation = () => {
   }, []);
 
   return (
-    <div className="relative h-66 w-[30rem] text-c-font-gray text-[4rem] xs:text-c-white sm:text-[3rem] sm:w-[24rem] sm:h-40 font-text mb-10">
+    <div
+      className={clsx(
+        "relative font-header mb-[44px]",
+        "text-[3rem] tablet:text-[4rem]",
+        "w-[24rem] tablet:w-[30rem]",
+        "h-40 tablet:h-[16rem]",
+        "text-c-white mobile:text-c-font-gray"
+      )}
+    >
       <div className="absolute bottom-0 leading-[70px]">
         {`${TEXTS[index % TEXTS.length]}`.split(" ").map((n, i) => (
           <ReactTextTransition

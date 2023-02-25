@@ -8,6 +8,13 @@ module.exports = {
       sm: { min: "1px", max: "767px" },
       csm: { min: "640px", max: "767px" },
       mobile: { min: "640px" },
+      mobileM: { min: "700px" },
+      tablet: { min: "767px" },
+      tabletM: { min: "901px" },
+      tabletL: { min: "962px" },
+      desktop: { min: "1025px" },
+      desktopM: { min: "1200px" },
+      desktopL: { min: "1535px" },
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
       md: { min: "768px", max: "1023px" },
@@ -26,16 +33,29 @@ module.exports = {
     },
 
     fontSize: {
-      xxs: ["10px"],
-      xs: ["12px"],
-      sm: ["14px", "20px"],
-      base: ["16px", "24px"],
-      lg: ["20px", "28px"],
-      xl: ["24px", "32px"],
+      xxs: "12px",
+      xs: "14px",
+      sm: "16px",
+      base: "18px",
+      md: "20px",
+      normal: "24px",
+      lg: "30px",
+      xl: "40px",
+      xxl: "46px",
     },
+
     fontFamily: {
       header: ["Omnes", "sans-serif"],
-      text: ["Omnes", "sans-serif"],
+    },
+
+    borderWidth: {
+      1: "1px",
+    },
+    borderRadius: { 4: "4px" },
+
+    boxShadow: {
+      "c-sm": "0 2px 10px -5px rgba(0, 0, 0, 0.2)",
+      "c-md": "0 2px 80px -15px rgba(0, 0, 0, 0.1)",
     },
 
     extend: {
@@ -52,7 +72,7 @@ module.exports = {
         "c-lime": "#CBE2AE",
         "c-gray-light": "#EEEEEE",
         "c-gray-medium": "#616060",
-        "c-section-gray": "#f2f3f5",
+        "c-section-gray": "#F2F3F5",
         "c-gray": "#E4E4E4",
         "c-font-gray": "#202125",
         "c-footer-gray": "#141414",

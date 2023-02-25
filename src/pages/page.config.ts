@@ -1,18 +1,18 @@
-import DefaultPageTemplate from "./defaultPageTemplate/page";
-import DiscoveryPageTemplate from "./discoveryPageTemplate/page";
+import DiscoveryPage from "./discovery/page";
+import HomePage from "./home/page";
 
 const PAGES = [
   {
     title: "Default",
     route: "/",
     exact: true,
-    Component: DefaultPageTemplate,
+    Component: HomePage,
   },
   {
     title: "Discovery",
     route: "en/discovery",
     exact: false,
-    Component: DiscoveryPageTemplate,
+    Component: DiscoveryPage,
   },
 ];
 

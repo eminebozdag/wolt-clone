@@ -1,12 +1,13 @@
 import Layout from "../../components/layout";
 import ApplyJobCarousel from "./components/carousel/apply-job-carousel";
 import Countries from "./components/countries/countries";
-import DownloadApp from "./components/download-app/download-app";
+import DownloadApp from "./components/download-app";
 import { getBannerOfToday } from "./components/home-banner/banner.config";
 import HomeBanner from "./components/home-banner/home-banner";
-import Title from "./components/title/title";
-import VideoSection from "./components/video-section/video-section";
-const DefaultPageTemplate = () => {
+import Title from "./components/title";
+import VideoSection from "./components/video-section";
+
+const HomePage = () => {
   const { color, image } = getBannerOfToday();
 
   return (
@@ -25,4 +26,5 @@ const DefaultPageTemplate = () => {
     </Layout>
   );
 };
-export default DefaultPageTemplate;
+
+export default HomePage;
