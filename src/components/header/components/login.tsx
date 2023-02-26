@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { dispatchShowLoginModal } from "../../../store/actions/globalActions";
@@ -17,7 +18,7 @@ const Login = () => {
 
   return (
     <div className="flex items-center">
-      <div className="lg:flex items-center gap-5 max-lg:hidden">
+      <div className="hidden desktop:flex items-center gap-6">
         <Button variant="secondary" onClick={handleLogin}>
           Log in
         </Button>
@@ -27,22 +28,27 @@ const Login = () => {
         </Button>
       </div>
 
-      <div className="lg:hidden max-lg:flex flex-col relative">
+      <div className="relative flex flex-col desktop:hidden">
         <div className="flex items-center">
           <PopoverButton
             button={
               <UserIcon
-                height={34}
-                width={34}
-                className="bg-c-white border-2 border-c-white rounded-full"
+                height={30}
+                width={30}
+                className={clsx(
+                  "bg-c-white rounded-full",
+                  "border-1 border-c-white",
+                  "tabletL:h-[34px] tabletL:w-[34px]"
+                )}
               />
             }
             open={popover}
             onClickAway={() => setPopover(false)}
             onClick={() => setPopover(!popover)}
-          >
-            {<LoginToolbar onLogin={handleLogin} show={true} />}
-          </PopoverButton>
+          />
+          <div className="absolute top-12 right-0 z-50">
+            <LoginToolbar onLogin={handleLogin} show={popover} />
+          </div>
         </div>
       </div>
     </div>

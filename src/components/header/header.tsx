@@ -8,15 +8,18 @@ const Header = () => {
     <header className="block bg-c-white border-b-1 border-b-c-gray">
       <Container
         className={clsx(
-          "items-center justify-between justify-items-center",
+          "items-center justify-between",
           "mx-auto px-4",
-          "h-[54px] mobile:h-[68px]"
+          "h-[54px] mobile:h-[60px] tabletL:h-[68px]"
         )}
       >
         <div className="flex flex-1 justify-start items-center">
           <a href="/en/discovery">
             <div className="flex items-center">
-              <WoltLogo color="black" height={40} width={68} />
+              <WoltLogo
+                color="black"
+                className={"h-[20px] mobile:h-[24px] tabletL:h-[27px] "}
+              />
             </div>
           </a>
         </div>

@@ -17,44 +17,27 @@ interface Props {
 }
 
 const PopoverButton: React.FC<Props> = (props: Props) => {
-  const {
-    open,
-    button,
-    className,
-    popoverClassName,
-    children,
-    onClick,
-    onClickAway,
-  } = props;
+  const { open, button, className, onClick, onClickAway } = props;
 
   return (
     <ClickAwayListener onClickAway={() => onClickAway && onClickAway()}>
       <div
         className={clsx(
           "relative flex items-center",
-          "h-10 rounded-full bg-c-gray-light px-1 hover:bg-c-gray cursor-pointer",
+          "bg-c-gray-light hover:bg-c-gray p-[2px] tabletL:p-[4px] rounded-full cursor-pointer",
           className
         )}
       >
         <div className="flex items-center" onClick={() => onClick && onClick()}>
           {button}
-          <div className="ml-1">
+          <div className="mx-1">
             <DownArrow
-              height={24}
-              width={24}
-              fill={"c-font-gray"}
+              height={20}
+              width={20}
               className={open ? "rotate-180" : ""}
             />
           </div>
         </div>
-
-        {open && (
-          <div
-            className={clsx("absolute top-12 right-0 z-50", popoverClassName)}
-          >
-            {children}
-          </div>
-        )}
       </div>
     </ClickAwayListener>
   );

@@ -10,25 +10,25 @@ interface Object {
 
 const Navigation = (data: Props) => {
   return (
-    <nav className="flex-[1_1_0%] lg:max-w-[30%]">
-      <label className="relative text-c-white/75 font-medium text-base md:text-sm">
+    <nav className="flex-1 desktop:max-w-[20%]">
+      <label className="relative text-c-white/80 text-xs tabletL:text-sm">
         {data.title}
       </label>
       <div className="mt-[1.5rem]">
-        {data.tags?.map((tag) => {
-          return (
-            <ul className="flex flex-col leading-7">
+        <ul className="flex flex-col gap-1 tabletL:gap-2">
+          {data.tags?.map((tag) => {
+            return (
               <li>
                 <a
                   href={tag.route}
-                  className="text-c-white text-sm md:text-xs font-normal cursor-pointer hover:underline"
+                  className="text-c-white font-normal cursor-pointer hover:underline text-xxs tabletL:text-xs"
                 >
                   {tag.tag_title}
                 </a>
               </li>
-            </ul>
-          );
-        })}
+            );
+          })}
+        </ul>
       </div>
     </nav>
   );

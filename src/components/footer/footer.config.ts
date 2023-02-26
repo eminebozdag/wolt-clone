@@ -1,4 +1,8 @@
-const NAVIGATION_DATA = [
+import AccessibilityIcon from "../icons/accessibility-icon";
+import LanguageIcon from "../icons/language-icon";
+import PinIcon from "../icons/pin-icon";
+
+export const NAVIGATION_DATA = [
   {
     title: "Let's do this together",
     tags: [
@@ -101,4 +105,23 @@ const NAVIGATION_DATA = [
   },
 ];
 
-export default NAVIGATION_DATA;
+export const LEGAL_INFO = [
+  {
+    title: "Accessibility Statement",
+    route: "https://explore.wolt.com/en/deu/accessibility-statement",
+  },
+  {
+    title: "Terms and Conditions",
+    route: "https://explore.wolt.com/en/deu/terms",
+  },
+  {
+    title: "Privacy Policy",
+    route: "https://explore.wolt.com/en/deu/privacy",
+  },
+];
+
+export const SETTINGS = [
+  { title: "Germany", Component: PinIcon },
+  { title: "English", Component: LanguageIcon },
+  { title: "Accessibility", Component: AccessibilityIcon },
+];

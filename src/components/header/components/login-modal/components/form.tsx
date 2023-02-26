@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { useState } from "react";
 import Button from "../../../../button";
 import Input from "../../../../input";
@@ -27,19 +28,20 @@ const Form = () => {
         type="email"
         value={val}
         onChange={(e: any) => handleChange(e.target.value)}
-      ></Input>
+      />
 
       {error && (
-        <span className="text-red-500 px-4 text-xs transition duration-500 ease-in-out">
+        <span
+          className={clsx(
+            "text-red-500 text-xxs mx-4 mt-2",
+            "transition duration-500 ease-in-out"
+          )}
+        >
           {error}
         </span>
       )}
 
-      <Button
-        hover
-        variant="primary"
-        className="justify-center mt-4 py-4 font-semibold"
-      >
+      <Button hover variant="primary" className="justify-center mt-4 py-4">
         Next
       </Button>
     </form>

@@ -33,6 +33,7 @@ module.exports = {
     },
 
     fontSize: {
+      cxs: "10.5px",
       xxs: "12px",
       xs: "14px",
       sm: "16px",
@@ -40,6 +41,7 @@ module.exports = {
       md: "20px",
       normal: "24px",
       lg: "30px",
+      clg: "32px",
       xl: "40px",
       xxl: "46px",
     },
@@ -50,6 +52,7 @@ module.exports = {
 
     borderWidth: {
       1: "1px",
+      0.2: "0.2px",
     },
     borderRadius: { 4: "4px" },
 
