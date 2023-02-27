@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Container from "../../../../components/container";
+import Container from "components/container";
 import COUNTRIES from "./countries.config";
 import Country from "./country";
 

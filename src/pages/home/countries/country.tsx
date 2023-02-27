@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import DownArrow from "../../../../components/icons/down-arrow";
+import DownArrow from "components/icons/down-arrow";
 interface Props {
 	country?: string;
 	route?: string;
@@ -13,7 +13,7 @@ const Country = (data: Props) => {
 			className={clsx(
 				"flex items-center justify-between p-4 rounded-4 border-1 border-c-gray text-c-font-gray",
 				"hover:text-c-blue hover:shadow-c-sm",
-				"transition ease-in duration-150"
+				"transition ease-in duration-150",
 			)}>
 			<span className="whitespace-nowrap text-ellipsis overflow-visible">
 				<span className="flex justify-start items-center">

@@ -14,10 +14,10 @@ const TextAnimation = () => {
 		<div
 			className={clsx(
 				"relative font-header mb-[44px]",
-				"text-[3rem] tablet:text-[4rem]",
-				"w-[24rem] tablet:w-[30rem]",
+				"text-[3rem] tabletL:text-[4rem]",
+				"w-full ",
 				"h-40 tablet:h-[16rem]",
-				"text-c-white mobile:text-c-font-gray"
+				"text-c-white mobile:text-c-font-gray",
 			)}>
 			<div className="absolute bottom-0 leading-[70px]">
 				{`${TEXTS[index % TEXTS.length]}`.split(" ").map((n, i) => (

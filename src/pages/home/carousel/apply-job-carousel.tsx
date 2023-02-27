@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Container from "../../../../components/container";
+import Container from "components/container";
 import Card from "./card";
 import CARD_DATA from "./card.config";
 const ApplyJobCarousel = () => {
@@ -10,12 +10,12 @@ const ApplyJobCarousel = () => {
 					"font-header text-c-font-gray leading-[3.2rem]",
 					"font-[600] mobile:font-[400]",
 					"text-normal mobile:text-xl tabletL:text-xxl",
-					"px-[21px] tabletL:px-[24px]",
-					"mt-[28px] mobile:mt-[35px] tabletL:mt-[40px] mb-[7px] tabletL:mb-2"
+					"px-[21px] tabletL:px-6",
+					"mt-[28px] mobile:mt-[35px] tabletL:mt-10 mb-[7px] tabletL:mb-2",
 				)}>
 				Hungry for more than food?
 			</h2>
-			<div className={clsx("block desktop:flex w-full gap-6", "mt-[28px] mobile:mt-[35px] tabletL:mt-10")}>
+			<div className={clsx("block desktop:flex w-full gap-6", "mobile:mt-[35px] tabletL:mt-10")}>
 				{CARD_DATA.map((data) => (
 					<Card {...data} />
 				))}

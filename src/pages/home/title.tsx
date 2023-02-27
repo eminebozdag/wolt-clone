@@ -12,7 +12,7 @@ const Title = () => {
 					)}>
 					Did you know?
 				</h3>
-				<p className={clsx("max-w-[45rem] mx-auto font-normal", "text-sm mobile:text-base desktop:text-normal", "leading-6 desktop:leading-10")}>
+				<p className={clsx("max-w-[45rem] mx-auto text-c-font-gray", "text-xs mobile:text-base desktop:text-normal", "leading-6 desktop:leading-10")}>
 					Getting home-delivered sushi is more than your life made easy. When you order with Wolt, you help thousands of hard-working restaurant and store
 					owners and couriers make a living.
 				</p>

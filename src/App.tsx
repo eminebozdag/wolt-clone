@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import LoginModal from "./components/header/components/login-modal/login-modal";
+import LoginModal from "./components/header/login-modal/login-modal";
 import ShadowBackground from "./components/shadow-background";
 import PAGES from "./pages/page.config";
 import {dispatchShowLoginModal} from "./store/actions/globalActions";

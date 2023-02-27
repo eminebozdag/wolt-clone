@@ -1,11 +1,11 @@
 import Layout from "../../components/layout";
-import ApplyJobCarousel from "./components/carousel/apply-job-carousel";
-import Countries from "./components/countries/countries";
-import DownloadApp from "./components/download-app";
-import {getBannerOfToday} from "./components/home-banner/banner.config";
-import HomeBanner from "./components/home-banner/home-banner";
-import Title from "./components/title";
-import VideoSection from "./components/video-section";
+import ApplyJobCarousel from "./carousel/apply-job-carousel";
+import Countries from "./countries/countries";
+import DownloadApp from "./download-app";
+import {getBannerOfToday} from "./home-banner/banner.config";
+import HomeBanner from "./home-banner/home-banner";
+import Title from "./title";
+import VideoSection from "./video-section";
 
 const HomePage = () => {
 	const {color, image} = getBannerOfToday();

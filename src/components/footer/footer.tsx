@@ -25,7 +25,7 @@ const Footer = () => {
 							<Navigation {...data} />
 						))}
 					</div>
-					<div className="flex tablet:hidden flex-col mx-[-30px]">
+					<div className="flex tablet:hidden flex-col mx-[-15px] mobile:mx-[-30px]">
 						{NAVIGATION_DATA.map((data) => (
 							<AccordionNavigation {...data} />
 						))}

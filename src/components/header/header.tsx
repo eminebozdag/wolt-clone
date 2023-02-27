@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Container from "../container";
 import WoltLogo from "../icons/wolt-logo";
-import Login from "./components/login";
+import Login from "./login";
 
 const Header = () => {
 	return (
@@ -10,7 +10,7 @@ const Header = () => {
 				<div className="flex flex-1 justify-start items-center">
 					<a href="/en/discovery">
 						<div className="flex items-center">
-							<WoltLogo color="black" className={"h-[20px] mobile:h-[24px] tabletL:h-[27px] "} />
+							<WoltLogo color="black" className={"h-[20px] mobile:h-[24px] tabletL:h-[27px]"} />
 						</div>
 					</a>
 				</div>

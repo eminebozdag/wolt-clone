@@ -9,7 +9,7 @@ const DownloadApp = () => {
 			className={clsx(
 				"flex flex-col w-full bg-c-section-gray overflow-hidden",
 				"h-auto mobile:h-[758px]",
-				"mt-[100px] mb-[140px] pt-[56px] mobile:pt-0",
+				"mt-[100px] mb-[100px]  pt-[56px] mobile:pt-0",
 			)}>
 			<Container className={clsx("relative items-center w-full h-full m-auto", "mobile:py-[30px]", "flex-col mobile:flex-row")}>
 				<div
@@ -36,7 +36,7 @@ const DownloadApp = () => {
 					<h2 className={clsx("font-header font-[400] text-c-font-gray leading-[3.5rem] mb-10", "text-xl mobile:text-xxl")}>
 						Honey, we’re not cooking tonight
 					</h2>
-					<p className="text-c-gray-medium leading-6 mb-10 text-xs tablet:text-sm">
+					<p className="text-c-gray-medium leading-6 mb-10 text-xxs tablet:text-xs">
 						Get the Apple-awarded Wolt app and choose from 40,000 restaurants and hundreds of stores in 20+ countries. Discover and get what you want – our
 						courier partners bring it to you.
 					</p>

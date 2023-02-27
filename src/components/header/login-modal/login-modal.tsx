@@ -53,7 +53,7 @@ const LoginModal = (props: Props) => {
 										<hr className="flex grow shrink basis-auto border-c-gray"></hr>
 									</div>
 									<Form />
-									<span className={clsx("text-c-gray-medium pt-[7px] mt-[7px]", "text-cxs tabletL:text-xxs")}>
+									<span className={clsx("text-c-gray-medium font-light pt-[7px] mt-[7px]", "text-cxs tabletL:text-xxs")}>
 										{"Please visit  "}
 										<a href="https://explore.wolt.com/en/deu/privacy" target="_blank" rel="noopener noreferrer" className="text-c-blue font-medium">
 											Wolt Privacy Statement
