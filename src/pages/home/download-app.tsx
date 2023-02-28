@@ -5,11 +5,12 @@ import GooglePlayStore from "components/icons/store/play-store";
 import React, {useEffect, useState} from "react";
 
 const DownloadApp = () => {
-	const DEFAULT_HEIGHT = [325, 2500, 2900];
+	const DEFAULT_HEIGHT = [335, 2200, 2750];
 	const [scrollPosition, setScrollPosition] = useState(DEFAULT_HEIGHT[0]);
 	const handleScroll = () => {
 		const position = window.pageYOffset;
 		const [defaultHeight, min, max] = DEFAULT_HEIGHT;
+		console.log(position);
 		if (position > min && position < max) {
 			const diff = position - min;
 			const pos = diff - defaultHeight;
@@ -46,6 +47,7 @@ const DownloadApp = () => {
 							"scale-[.53]",
 							"skew-x-[13.83deg] skew-y-0",
 							"translate-x-[-72px] translate-y-[10px] !important",
+							"scroll-smooth",
 						)}>
 						<img src="/assets/animation-images/ios-discovery.jpg" alt="ios-discovery" style={{transform: `translate3d(0, ${scrollPosition}px, 0)`}} />
 					</div>
