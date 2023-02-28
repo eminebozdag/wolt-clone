@@ -2,14 +2,35 @@ import clsx from "clsx";
 import Container from "components/container";
 import AppleStoreIcon from "components/icons/store/app-store";
 import GooglePlayStore from "components/icons/store/play-store";
+import React, {useEffect, useState} from "react";
 
 const DownloadApp = () => {
+	const DEFAULT_HEIGHT = [325, 2500, 2900];
+	const [scrollPosition, setScrollPosition] = useState(DEFAULT_HEIGHT[0]);
+	const handleScroll = () => {
+		const position = window.pageYOffset;
+		const [defaultHeight, min, max] = DEFAULT_HEIGHT;
+		if (position > min && position < max) {
+			const diff = position - min;
+			const pos = diff - defaultHeight;
+			setScrollPosition(-pos);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll, {passive: true});
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
 		<div
 			className={clsx(
 				"flex flex-col w-full bg-c-section-gray overflow-hidden",
 				"h-auto mobile:h-[758px]",
-				"mt-[100px] mb-[100px]  pt-[56px] mobile:pt-0",
+				"mt-[100px] mb-[100px] pt-[56px] mobile:pt-0",
 			)}>
 			<Container className={clsx("relative items-center w-full h-full m-auto", "mobile:py-[30px]", "flex-col mobile:flex-row")}>
 				<div
@@ -18,17 +39,15 @@ const DownloadApp = () => {
 						"hidden mobile:flex",
 						"right-[-50rem] tablet:right-[-44rem] desktop:right-[-32rem]",
 					)}>
-					<div>
-						<img
-							src="/assets/animation-images/ios-discovery.jpg"
-							alt="ios-discovery"
-							className={clsx(
-								"absolute h-full w-auto z-10",
-								"origin-top-left rotate-[-28.51deg] scale-[.79]",
-								"translate-x-[48px] translate-y-[140px]",
-								"skew-x-[13.83deg] skew-y-0",
-							)}
-						/>
+					<div
+						className={clsx(
+							"absolute h-full w-auto z-10",
+							"origin-top-left rotate-[-28.51deg]",
+							"scale-[.53]",
+							"skew-x-[13.83deg] skew-y-0",
+							"translate-x-[-72px] translate-y-[10px] !important",
+						)}>
+						<img src="/assets/animation-images/ios-discovery.jpg" alt="ios-discovery" style={{transform: `translate3d(0, ${scrollPosition}px, 0)`}} />
 					</div>
 					<img src="/assets/animation-images/front-cells.png" alt="front-cell" className="absolute object-cover h-full left-0 z-20" />
 				</div>
