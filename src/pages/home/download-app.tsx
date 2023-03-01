@@ -5,12 +5,12 @@ import GooglePlayStore from "components/icons/store/play-store";
 import React, {useEffect, useState} from "react";
 
 const DownloadApp = () => {
-	const DEFAULT_HEIGHT = [335, 2200, 2750];
+	const DEFAULT_HEIGHT = [335, 2400, 2900];
 	const [scrollPosition, setScrollPosition] = useState(DEFAULT_HEIGHT[0]);
 	const handleScroll = () => {
 		const position = window.pageYOffset;
 		const [defaultHeight, min, max] = DEFAULT_HEIGHT;
-		console.log(position);
+
 		if (position > min && position < max) {
 			const diff = position - min;
 			const pos = diff - defaultHeight;

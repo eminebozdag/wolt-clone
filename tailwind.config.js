@@ -4,9 +4,6 @@ module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		screens: {
-			xs: {min: "1px", max: "639px"},
-			sm: {min: "1px", max: "767px"},
-			csm: {min: "640px", max: "767px"},
 			mobileS: {min: "480px"},
 			mobile: {min: "640px"},
 			mobileM: {min: "700px"},
@@ -16,21 +13,6 @@ module.exports = {
 			desktop: {min: "1025px"},
 			desktopM: {min: "1200px"},
 			desktopL: {min: "1535px"},
-			// => @media (min-width: 640px and max-width: 767px) { ... }
-
-			md: {min: "768px", max: "1023px"},
-			cmd: {min: "0px", max: "1023px"},
-			// => @media (min-width: 768px and max-width: 1023px) { ... }
-
-			lg: {min: "1024px", max: "1279px"},
-			clg: {min: "1024px", max: "1535px"},
-			// => @media (min-width: 1024px and max-width: 1279px) { ... }
-
-			xl: {min: "1280px", max: "1535px"},
-			// => @media (min-width: 1280px and max-width: 1535px) { ... }
-
-			"2xl": {min: "1536px"},
-			// => @media (min-width: 1536px) { ... }
 		},
 
 		fontSize: {
@@ -55,6 +37,7 @@ module.exports = {
 			1: "1px",
 			0.2: "0.2px",
 		},
+
 		borderRadius: {4: "4px"},
 
 		boxShadow: {
@@ -92,6 +75,7 @@ module.exports = {
 			transitionProperty: {
 				height: "height",
 			},
+
 			variants: {
 				height: ["responsive", "hover", "focus"],
 			},
