@@ -40,9 +40,11 @@ const Button: React.FC<Props> = (props: Props) => {
 				variant && styles[variant],
 				className,
 			),
+			"data-testid": "button-component",
 		},
 		children,
 	);
 };
 
+export type {Props};
 export default Button;

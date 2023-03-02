@@ -1,6 +1,6 @@
 import {GlobalActionType} from "../actions/globalActions";
 
-const initialState = {
+export const initialState = {
 	showLoginModal: false,
 };
 
