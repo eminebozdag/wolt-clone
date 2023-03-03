@@ -2,7 +2,7 @@ import {fireEvent, render} from "@testing-library/react";
 import Button, {Props} from "./button";
 
 describe("<Button/>", () => {
-	it("should be rendered succesfully", () => {
+	it("should be rendered successfully", () => {
 		// Arrange
 		const props: Props = {};
 
@@ -51,7 +51,7 @@ describe("<Button/>", () => {
 		expect(container.firstElementChild?.children.length).not.toBe(0);
 	});
 
-	it("should click event can properly", () => {
+	it("should click event can work properly", () => {
 		//Arrange
 		const props: Props = {};
 		const mockOnClick = jest.fn();
