@@ -13,7 +13,7 @@ describe("<Container/>", () => {
 		expect(getByTestId("container-component")).not.toBeNull();
 	});
 
-	it("should have classname when pass classname as a prop", () => {
+	it("should have classname if classname passed as a prop", () => {
 		//Arrange
 		const props: Props = {className: "bg-c-white"};
 
@@ -25,7 +25,7 @@ describe("<Container/>", () => {
 		expect(container.firstElementChild).toHaveClass("bg-c-white");
 	});
 
-	it("should have children when children exist", () => {
+	it("should have children if children exist", () => {
 		//Arrange
 		const props: Props = {children: <div></div>};
 
