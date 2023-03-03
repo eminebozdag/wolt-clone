@@ -40,7 +40,7 @@ describe("<Button/>", () => {
 		expect(container.firstElementChild).toHaveClass("hover:bg-c-blue/90");
 	});
 
-	it("should have children if children exist", () => {
+	it("should have children if children props exist", () => {
 		//Arrange
 		const props: Props = {children: <div></div>};
 

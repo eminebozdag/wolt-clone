@@ -25,7 +25,7 @@ describe("<Container/>", () => {
 		expect(container.firstElementChild).toHaveClass("bg-c-white");
 	});
 
-	it("should have children if children exist", () => {
+	it("should have children if children props exist", () => {
 		//Arrange
 		const props: Props = {children: <div></div>};
 

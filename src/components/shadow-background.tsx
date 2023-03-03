@@ -11,6 +11,11 @@ const ShadowBackground = (props: Props) => {
 		component: clsx("absolute block bg-c-font-gray/30"),
 	};
 
-	return <div className={clsx("top-0 right-0 left-0 w-full h-full", type && styles[type], className)}>{children}</div>;
+	return (
+		<div className={clsx("top-0 right-0 left-0 w-full h-full", type && styles[type], className)} data-testid="shadowBg-component">
+			{children}
+		</div>
+	);
 };
+export type {Props};
 export default ShadowBackground;
