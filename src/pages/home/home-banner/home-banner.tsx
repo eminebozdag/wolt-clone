@@ -41,7 +41,8 @@ const HomeBanner = ({color, image}: Props) => {
 							start={{
 								before: <LocationIcon height={20} width={20} />,
 								after: <FilledLocationIcon height={20} width={20} />,
-							}}></Input>
+							}}
+						/>
 					</div>
 					<div className="mt-10"></div>
 				</div>
