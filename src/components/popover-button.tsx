@@ -27,7 +27,8 @@ const PopoverButton: React.FC<Props> = (props: Props) => {
 					"bg-c-gray-light hover:bg-c-gray rounded-full cursor-pointer",
 					"p-[2px] tabletL:p-[4px]",
 					className,
-				)}>
+				)}
+				data-testid="popover-button-component">
 				<div className="flex items-center" onClick={() => onClick && onClick()}>
 					{button}
 					<div className="mx-1">
@@ -39,4 +40,5 @@ const PopoverButton: React.FC<Props> = (props: Props) => {
 		</ClickAwayListener>
 	);
 };
+export type {Props};
 export default PopoverButton;
