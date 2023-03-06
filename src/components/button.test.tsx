@@ -1,4 +1,4 @@
-import {fireEvent, render} from "@testing-library/react";
+import {fireEvent, render, screen} from "@testing-library/react";
 import Button, {Props} from "./button";
 
 describe("<Button/>", () => {
@@ -7,11 +7,10 @@ describe("<Button/>", () => {
 		const props: Props = {};
 
 		// Act
-		const {getByTestId} = render(<Button {...props} />);
+		render(<Button {...props} />);
 
 		// Assert
-		// eslint-disable-next-line testing-library/prefer-screen-queries
-		expect(getByTestId("button-component")).not.toBeNull();
+		expect(screen.getByTestId("button-component")).not.toBeNull();
 	});
 
 	it("should have primary classname when variant is primary", () => {
@@ -46,6 +45,7 @@ describe("<Button/>", () => {
 
 		//Act
 		const {container} = render(<Button {...props} />);
+
 		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(container.firstElementChild?.children.length).not.toBe(0);
@@ -57,9 +57,8 @@ describe("<Button/>", () => {
 		const mockOnClick = jest.fn();
 
 		//Act
-		const {getByTestId} = render(<Button onClick={mockOnClick} {...props} />);
-		// eslint-disable-next-line testing-library/prefer-screen-queries
-		fireEvent.click(getByTestId("button-component"));
+		render(<Button onClick={mockOnClick} {...props} />);
+		fireEvent.click(screen.getByTestId("button-component"));
 
 		//Assert
 		expect(mockOnClick).toHaveBeenCalledTimes(1);

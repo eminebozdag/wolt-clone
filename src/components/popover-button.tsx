@@ -10,7 +10,6 @@ interface Props {
 	children?: any;
 	className?: string;
 	popoverClassName?: string;
-	styles?: React.CSSProperties;
 
 	onClick?(): void;
 	onClickAway?(): void;
@@ -28,14 +27,18 @@ const PopoverButton: React.FC<Props> = (props: Props) => {
 					"p-[2px] tabletL:p-[4px]",
 					className,
 				)}
-				data-testid="popover-button-component">
-				<div className="flex items-center" onClick={() => onClick && onClick()}>
+				data-testid="popover-component">
+				<div className="flex items-center" onClick={() => onClick && onClick()} data-testid="popover-button">
 					{button}
 					<div className="mx-1">
 						<DownArrow height={20} width={20} className={open ? "rotate-180" : ""} />
 					</div>
 				</div>
-				{open && <div className={clsx("absolute top-12 right-0 z-50", popoverClassName)}>{children}</div>}
+				{open && (
+					<div className={clsx("absolute top-12 right-0 z-50", popoverClassName)} data-testid="popover-children">
+						{children}
+					</div>
+				)}
 			</div>
 		</ClickAwayListener>
 	);
