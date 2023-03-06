@@ -18,7 +18,7 @@ const Login = () => {
 	};
 
 	return (
-		<div className="flex items-center">
+		<div className="flex items-center" data-testid="login-component">
 			<div className="hidden desktop:flex items-center gap-6">
 				<Button variant="secondary" onClick={handleLogin}>
 					Log in

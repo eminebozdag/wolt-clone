@@ -5,7 +5,7 @@ import Login from "./login";
 
 const Header = () => {
 	return (
-		<header className="block bg-c-white border-b-1 border-b-c-gray">
+		<header className="block bg-c-white border-b-1 border-b-c-gray" data-testid="header-component">
 			<Container className={clsx("items-center justify-between", "mx-auto px-4", "h-[54px] mobile:h-[60px] tabletL:h-[68px]")}>
 				<div className="flex flex-1 justify-start items-center">
 					<a href="/en/discovery">
