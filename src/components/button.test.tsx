@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from "@testing-library/react";
 import Button, {Props} from "./button";
 
 describe("<Button/>", () => {
-	it("should be rendered successfully", () => {
+	it("should render successfully", () => {
 		// Arrange
 		const props: Props = {};
 
