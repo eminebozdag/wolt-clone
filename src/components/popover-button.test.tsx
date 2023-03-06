@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from "@testing-library/react";
 import PopoverButton, {Props} from "./popover-button";
 
 describe("<PopoverButton/>", () => {
-	it("should be rendered successfully", () => {
+	it("should render successfully", () => {
 		//Arrange
 		const props: Props = {};
 
@@ -24,7 +24,7 @@ describe("<PopoverButton/>", () => {
 		expect(screen.getByTestId("popover-component")).toHaveClass("flex-col");
 	});
 
-	it("popover button should be render successfully when open is true and button, click event passed as a props", () => {
+	it("popover button should render successfully when open is true and button, click event passed as a props", () => {
 		//Arrange
 		const props: Props = {open: true, button: <button></button>};
 		const mockOnClick = jest.fn();
@@ -33,8 +33,8 @@ describe("<PopoverButton/>", () => {
 		render(<PopoverButton onClick={mockOnClick} {...props} />);
 		const popoverButton = screen.getByTestId("popover-button");
 		fireEvent.click(popoverButton);
-		//Assert
 
+		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(popoverButton.children[0]).not.toBeNull();
 		// eslint-disable-next-line testing-library/no-node-access
@@ -42,7 +42,7 @@ describe("<PopoverButton/>", () => {
 		expect(mockOnClick).toHaveBeenCalledTimes(1);
 	});
 
-	it("children should be render successfully when open is true and children, classname passed as a props", () => {
+	it("children should render successfully when open is true and children, classname passed as a props", () => {
 		//Arrange
 		const props: Props = {open: true, children: <div></div>, popoverClassName: "bg-c-white"};
 

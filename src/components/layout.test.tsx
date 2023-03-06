@@ -24,7 +24,6 @@ describe("<Layout/>", () => {
 		render(<Layout {...props} />);
 
 		// Assert
-		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(screen.getByTestId("layout-children").children.length).toBe(1);
 	});

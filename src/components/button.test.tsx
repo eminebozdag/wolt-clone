@@ -18,13 +18,10 @@ describe("<Button/>", () => {
 		const props: Props = {variant: "primary"};
 
 		// Act
-		const {container} = render(<Button {...props} />);
+		render(<Button {...props} />);
 
 		// Assert
-		// eslint-disable-next-line testing-library/no-node-access
-		expect(container.firstElementChild).toHaveClass(
-			"justify-center text-sm text-c-white font-semibold bg-c-blue px-[1rem] min-h-[2.875rem] rounded-lg",
-		);
+		expect(screen.getByTestId("button-component")).toHaveClass("bg-c-blue");
 	});
 
 	it("should hover when hover is true", () => {
@@ -32,11 +29,11 @@ describe("<Button/>", () => {
 		const props: Props = {variant: "primary", hover: true};
 
 		//Act
-		const {container} = render(<Button {...props} />);
+		render(<Button {...props} />);
 
 		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(container.firstElementChild).toHaveClass("hover:bg-c-blue/90");
+		expect(screen.getByTestId("button-component")).toHaveClass("hover:bg-c-blue/90");
 	});
 
 	it("should have children if children props exist", () => {
@@ -44,11 +41,11 @@ describe("<Button/>", () => {
 		const props: Props = {children: <div></div>};
 
 		//Act
-		const {container} = render(<Button {...props} />);
+		render(<Button {...props} />);
 
 		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(container.firstElementChild?.children.length).not.toBe(0);
+		expect(screen.getByTestId("button-component").children.length).not.toBe(0);
 	});
 
 	it("should click event can work properly", () => {

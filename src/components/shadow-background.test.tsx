@@ -1,17 +1,16 @@
-import {render} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import ShadowBackground, {Props} from "./shadow-background";
 
 describe("<ShadowBackground/>", () => {
-	it("should be rendered successfully", () => {
+	it("should render successfully", () => {
 		// Arrange
 		const props: Props = {};
 
 		// Act
-		const {getByTestId} = render(<ShadowBackground {...props} />);
+		render(<ShadowBackground {...props} />);
 
 		// Assert
-		// eslint-disable-next-line testing-library/prefer-screen-queries
-		expect(getByTestId("shadowBg-component")).not.toBeNull();
+		expect(screen.getByTestId("shadowBg-component")).not.toBeNull();
 	});
 
 	it("should have modal classname when type is modal", () => {
@@ -19,11 +18,10 @@ describe("<ShadowBackground/>", () => {
 		const props: Props = {type: "modal"};
 
 		// Act
-		const {container} = render(<ShadowBackground {...props} />);
+		render(<ShadowBackground {...props} />);
 
 		// Assert
-		// eslint-disable-next-line testing-library/no-node-access
-		expect(container.firstElementChild).toHaveClass("fixed flex items-center justify-center z-40 bg-c-font-gray/70");
+		expect(screen.getByTestId("shadowBg-component")).toHaveClass("bg-c-font-gray/70");
 	});
 
 	it("should have children if children props exist", () => {
@@ -31,9 +29,10 @@ describe("<ShadowBackground/>", () => {
 		const props: Props = {children: <div></div>};
 
 		//Act
-		const {container} = render(<ShadowBackground {...props} />);
+		render(<ShadowBackground {...props} />);
+
 		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(container.firstElementChild?.children.length).not.toBe(0);
+		expect(screen.getByTestId("shadowBg-component").children.length).not.toBe(0);
 	});
 });

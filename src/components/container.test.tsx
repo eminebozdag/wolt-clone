@@ -1,28 +1,27 @@
-import {render} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import Container, {Props} from "./container";
 describe("<Container/>", () => {
-	it("should be rendered successfully", () => {
+	it("should render successfully", () => {
 		//Arrange
 		const props: Props = {};
 
 		//Act
-		const {getByTestId} = render(<Container {...props} />);
+		render(<Container {...props} />);
 
 		//Assert
 		// eslint-disable-next-line testing-library/prefer-screen-queries
-		expect(getByTestId("container-component")).not.toBeNull();
+		expect(screen.getByTestId("container-component")).not.toBeNull();
 	});
 
-	it("should have classname if classname passed as a prop", () => {
+	it("should have classname if classname props exist", () => {
 		//Arrange
 		const props: Props = {className: "bg-c-white"};
 
 		//Act
-		const {container} = render(<Container {...props} />);
+		render(<Container {...props} />);
 
 		//Assert
-		// eslint-disable-next-line testing-library/no-node-access
-		expect(container.firstElementChild).toHaveClass("bg-c-white");
+		expect(screen.getByTestId("container-component")).toHaveClass("flex bg-c-white");
 	});
 
 	it("should have children if children props exist", () => {
@@ -30,9 +29,10 @@ describe("<Container/>", () => {
 		const props: Props = {children: <div></div>};
 
 		//Act
-		const {container} = render(<Container {...props} />);
+		render(<Container {...props} />);
+
 		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(container.firstElementChild?.children.length).not.toBe(0);
+		expect(screen.getByTestId("container-component").children.length).toBe(1);
 	});
 });
