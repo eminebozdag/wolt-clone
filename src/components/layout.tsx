@@ -8,7 +8,7 @@ const Layout = (props: Props) => {
 	return (
 		<div data-testid="layout-component">
 			<Header />
-			<div id="body">{children}</div>
+			<div data-testid="layout-children">{children}</div>
 			<Footer />
 		</div>
 	);
