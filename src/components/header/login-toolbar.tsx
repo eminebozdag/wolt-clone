@@ -12,7 +12,7 @@ interface Props {
 const LoginToolbar = ({onLogin, show, onClose}: Props) => {
 	return (
 		<CSSTransition in={show} unmountOnExit timeout={0} classNames="modal-fade">
-			<div className="bg-c-white rounded-lg z-50" onClick={onClose}>
+			<div className="bg-c-white rounded-lg z-50" onClick={onClose} data-testid="login-toolbar-component">
 				<div className="absolute w-4 h-2 right-5 top-[-7.7px] z-10">
 					<TriangleIcon className="fill-c-white" />
 				</div>
@@ -38,4 +38,5 @@ const LoginToolbar = ({onLogin, show, onClose}: Props) => {
 	);
 };
 
+export type {Props};
 export default LoginToolbar;
