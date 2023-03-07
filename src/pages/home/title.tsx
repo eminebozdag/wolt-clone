@@ -1,7 +1,7 @@
 import clsx from "clsx";
 const Title = () => {
 	return (
-		<div className={clsx("max-w-[1200px] text-center text-c-font-gray", "pt-[60px] mobile:pt-[130px] desktopM:mx-auto")}>
+		<div className={clsx("max-w-[1200px] text-center text-c-font-gray", "pt-[60px] mobile:pt-[130px] desktopM:mx-auto")} data-testid="title-component">
 			<div className="px-[21px] mobile:px-[49px] tabletL:px-[56px] desktop:px-0">
 				<h3
 					className={clsx(
