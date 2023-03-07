@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from "@testing-library/react";
-import PopoverButton, {Props} from "./popover-button";
+import PopoverButton, {Props} from "../../src/components/popover-button";
 
 describe("<PopoverButton/>", () => {
 	it("should render successfully", () => {

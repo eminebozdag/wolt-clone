@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import ShadowBackground, {Props} from "./shadow-background";
+import ShadowBackground, {Props} from "../../src/components/shadow-background";
 
 describe("<ShadowBackground/>", () => {
 	it("should render successfully", () => {

@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import Form from "./form";
+import Form from "../../../../src/components/header/login-modal/form";
 describe("<Form/>", () => {
 	it("should render successfully", () => {
 		// Arrange

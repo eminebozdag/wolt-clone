@@ -16,14 +16,8 @@ const AccordionNavigation = (data: Props) => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	return (
-		<nav className="flex flex-col w-full ">
-			<Button
-				variant="secondary"
-				className="text-c-white py-[7px] px-[15px] rounded-none delay-70ms"
-				hover
-				onClick={() => {
-					setIsExpanded(!isExpanded);
-				}}>
+		<nav className="flex flex-col w-full" data-testid="accordion-navigation-component">
+			<Button variant="secondary" className="text-c-white py-[7px] px-[15px] rounded-none delay-70ms" hover onClick={() => setIsExpanded(!isExpanded)}>
 				<div className="flex flex-row justify-between items-center w-full h-[21px]">
 					<span className="text-xxs text-ellipsis cursor-pointer overflow-hidden">{data.title}</span>
 
@@ -46,4 +40,5 @@ const AccordionNavigation = (data: Props) => {
 		</nav>
 	);
 };
+export type {Props};
 export default AccordionNavigation;

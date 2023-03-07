@@ -1,6 +1,6 @@
 import {fireEvent, render, screen, within} from "@testing-library/react";
 import React from "react";
-import LoginToolbar, {Props} from "./login-toolbar";
+import LoginToolbar, {Props} from "./../../../src/components/header/login-toolbar";
 
 describe("<LoginToolbar/>", () => {
 	it("should render successfully", () => {

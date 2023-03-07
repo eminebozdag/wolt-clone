@@ -10,7 +10,9 @@ import Navigation from "./navigation";
 
 const Footer = () => {
 	return (
-		<footer className={clsx("bg-c-footer-gray", "px-4 pb-[28px] tabletL:pb-8", "pt-[36.750px] mobile:px-[30px] tablet:pt-[91px] tabletL:pt-[104px]")}>
+		<footer
+			className={clsx("bg-c-footer-gray", "px-4 pb-[28px] tabletL:pb-8", "pt-[36.750px] mobile:px-[30px] tablet:pt-[91px] tabletL:pt-[104px]")}
+			data-testid="footer-component">
 			<div className="flex flex-col max-w-[1140px] m-auto">
 				<div className={clsx("flex-1 flex justify-between gap-8", "flex-col tablet:flex-row", "mb-[91px] tabletL:mb-[104px]")}>
 					<div className="flex flex-col flex-[2_1_0%]">

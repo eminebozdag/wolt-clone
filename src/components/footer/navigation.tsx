@@ -10,10 +10,10 @@ interface Object {
 
 const Navigation = (data: Props) => {
 	return (
-		<nav className="flex-1 desktop:max-w-[20%]">
+		<nav className="flex-1 desktop:max-w-[20%]" data-testid="navigation-component">
 			<label className="relative text-c-white/80 text-xs tabletL:text-sm">{data.title}</label>
 			<div className="mt-[1.5rem]">
-				<ul className="flex flex-col gap-1 tabletL:gap-2">
+				<ul className="flex flex-col gap-1 tabletL:gap-2" data-testid="data-tags">
 					{data.tags?.map((tag) => {
 						return (
 							<li>

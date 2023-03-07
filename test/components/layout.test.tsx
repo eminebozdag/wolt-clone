@@ -1,14 +1,23 @@
 import {render, screen} from "@testing-library/react";
-import Layout, {Props} from "./layout";
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import Layout, {Props} from "../../src/components/layout";
+import reducers from "../../src/store/combine";
 
-jest.mock("./header/header", () => jest.fn().mockReturnValue(<div data-testid="header-component"></div>));
-jest.mock("./footer/footer", () => jest.fn().mockReturnValue(<div data-testid="footer-component"></div>));
+const mockStore = createStore(reducers, {
+	globalReducer: {},
+} as any);
 describe("<Layout/>", () => {
 	it("should render successfully", () => {
 		// Arrange
+		const component = (
+			<Provider store={mockStore}>
+				<Layout />
+			</Provider>
+		);
 
 		// Act
-		render(<Layout />);
+		render(component);
 
 		// Assert
 		expect(screen.getByTestId("layout-component")).not.toBeNull();
@@ -19,9 +28,14 @@ describe("<Layout/>", () => {
 	it("should have children if children props exist", () => {
 		// Arrange
 		const props: Props = {children: <div></div>};
+		const component = (
+			<Provider store={mockStore}>
+				<Layout {...props} />
+			</Provider>
+		);
 
 		// Act
-		render(<Layout {...props} />);
+		render(component);
 
 		// Assert
 		// eslint-disable-next-line testing-library/no-node-access

@@ -1,27 +1,28 @@
 import {render, screen} from "@testing-library/react";
-import React from "react";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
-import reducers from "../../store/combine";
-import LoginButton from "./login-button";
+import Header from "../../../src/components/header/header";
+import reducers from "../../../src/store/combine";
 
 const mockStore = createStore(reducers, {
 	globalReducer: {},
 } as any);
 
-describe("<LoginButton/>", () => {
+describe("<Header/>", () => {
 	it("should render successfully", () => {
-		//Arrange
+		// Arrange
 		const component = (
 			<Provider store={mockStore}>
-				<LoginButton />
+				<Header />
 			</Provider>
 		);
 
-		//Act
+		// Act
 		render(component);
 
-		//Assert
+		// Assert
+		expect(screen.getByTestId("container-component")).not.toBeNull();
+		expect(screen.getByTestId("wolt-logo")).not.toBeNull();
 		expect(screen.getByTestId("login-component")).not.toBeNull();
 	});
 });
