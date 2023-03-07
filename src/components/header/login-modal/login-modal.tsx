@@ -18,7 +18,8 @@ const LoginModal = (props: Props) => {
 					"w-[100vw] mobile:w-[30rem]",
 					"absolute bottom-0 right-0 left-0",
 					"mobile:fixed mobile:right-auto mobile:left-auto mobile:bottom-auto",
-				)}>
+				)}
+				data-testid="login-modal-component">
 				<div className="bg-c-white shadow-c-md rounded-2xl z-20">
 					<div className="relative pt-[63px] tabletL:pt-[72px]">
 						<div className="absolute right-4 top-4">

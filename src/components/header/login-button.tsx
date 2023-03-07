@@ -7,7 +7,7 @@ import UserIcon from "../icons/user-icon";
 import PopoverButton from "../popover-button";
 import LoginToolbar from "./login-toolbar";
 
-const Login = () => {
+const LoginButton = () => {
 	const [popover, setPopover] = useState(false);
 	const dispatch = useDispatch();
 
@@ -45,4 +45,4 @@ const Login = () => {
 		</div>
 	);
 };
-export default Login;
+export default LoginButton;

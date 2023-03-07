@@ -22,7 +22,7 @@ const Form = () => {
 	};
 
 	return (
-		<form className="flex flex-col mt-4" onSubmit={handleSubmit}>
+		<form className="flex flex-col mt-4" onSubmit={handleSubmit} data-testid="form-component">
 			<Input label="Email" type="email" value={val} onChange={(e: any) => handleChange(e.target.value)} />
 
 			{error && <span className={clsx("text-red-500 text-cxs font-light mx-4 mt-2", "transition duration-500 ease-in-out")}>{error}</span>}

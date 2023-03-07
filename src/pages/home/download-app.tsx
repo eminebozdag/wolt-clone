@@ -72,7 +72,7 @@ const DownloadApp = () => {
 							href="https://wolt.onelink.me/Uy67?pid=not-available-web-to-app&c=not-available-web-to-app&af_adset=not-available-web-to-app&af_keywords=not-available-web-to-app&af_sub1=https%3A%2F%2Fwolt.com%2Fen&af_sub2=%2Fen%2Fdeu&af_r=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.wolt.android"
 							target="_blank"
 							rel="noreferrer">
-							<GooglePlayStore className="mb-4 w-auto h-[43px] desktop:h-12" />
+							<GooglePlayStore className="mb-4 w-36 desktop:w-40 h-auto desktop:h-auto" />
 						</a>
 					</div>
 				</div>

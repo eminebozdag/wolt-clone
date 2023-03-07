@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Container from "../container";
 import WoltLogo from "../icons/wolt-logo";
-import Login from "./login";
+import LoginButton from "./login-button";
 
 const Header = () => {
 	return (
@@ -15,7 +15,7 @@ const Header = () => {
 					</a>
 				</div>
 				<div className="flex flex-1 justify-end items-center">
-					<Login />
+					<LoginButton />
 				</div>
 			</Container>
 		</header>
