@@ -13,7 +13,7 @@ describe("<Card/>", () => {
 		expect(screen.getByTestId("card-component")).not.toBeNull();
 	});
 
-	it("should image render successfully", () => {
+	it("should have card image and title if props exist", () => {
 		// Arrange
 		const props: Props = {image: "jobs-card-image", title: "Enter a new chapter and find a job at Wolt"};
 
@@ -22,5 +22,6 @@ describe("<Card/>", () => {
 
 		// Assert
 		expect(screen.getByAltText(/jobs-card-image/i)).not.toBeNull();
+		expect(screen.getByTitle("card_title").textContent).toBe("Enter a new chapter and find a job at Wolt");
 	});
 });
