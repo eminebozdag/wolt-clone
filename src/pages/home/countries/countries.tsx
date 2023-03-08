@@ -5,9 +5,10 @@ import Country from "./country";
 
 const Countries = () => {
 	return (
-		<Container className="flex-col w-full bg-c-white m-auto px-4 py-10 mobile:py-[84px] tabletL:py-[130px] ">
+		<Container className="flex-col w-full bg-c-white m-auto px-4 py-10 mobile:py-[84px] tabletL:py-[130px]">
 			<section className={clsx("flex justify-between items-center", "mobile:mb-4 tablet:mb-8 tabletM:mb-14")}>
 				<h2
+					title="countries_title"
 					className={clsx(
 						"font-header text-c-font-gray",
 						"font-[600] mobile:font-[400]",
