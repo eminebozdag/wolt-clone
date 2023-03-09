@@ -32,7 +32,8 @@ const DownloadApp = () => {
 				"flex flex-col w-full bg-c-section-gray overflow-hidden",
 				"h-auto mobile:h-[758px]",
 				"mt-[100px] mb-[100px] pt-[56px] mobile:pt-0",
-			)}>
+			)}
+			data-testid="download-app-component">
 			<Container className={clsx("relative items-center w-full h-full m-auto", "mobile:py-[30px]", "flex-col mobile:flex-row")}>
 				<div
 					className={clsx(

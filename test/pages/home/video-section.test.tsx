@@ -20,7 +20,7 @@ describe("<VideoSection/>", () => {
 
 		//Act
 		render(<VideoSection />);
-		fireEvent.mouseEnter(screen.getByTestId("button-component"));
+		fireEvent.mouseOver(screen.getByTestId("button-component"));
 
 		//Assert
 		expect(screen.getByTestId("button-hover")).toHaveClass("transition");
