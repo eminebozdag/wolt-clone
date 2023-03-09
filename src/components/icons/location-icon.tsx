@@ -2,7 +2,7 @@ import SVGProps from "./types";
 const LocationIcon = ({height, width, className, ...props}: SVGProps) => {
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" aria-hidden="true" {...props} className={className}>
-			<g fill="none" fill-rule="evenodd">
+			<g fill="none" fillRule="evenodd">
 				<path d="M0 0h24v24H0z"></path>
 				<path
 					fill="#202125"

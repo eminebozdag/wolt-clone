@@ -21,7 +21,7 @@ const Country = (data: Props) => {
 					<span className="flex mr-4">
 						<img src={`/assets/flags/${country}.svg`} alt={`${country}_flag`} className="w-6 rounded-4 shadow-md" />
 					</span>
-					<span title="country_name" className="text-sm">
+					<span title="country_name" className="text-sm tabletL:text-base py-0 tabletL:py-1">
 						{country}
 					</span>
 				</span>

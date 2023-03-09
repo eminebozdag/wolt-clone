@@ -18,8 +18,8 @@ const Footer = () => {
 					<div className="flex flex-col flex-[2_1_0%]">
 						<WoltLogo color="white" height={26} width={72} className="mb-[24.5px] mobile:mb-7" />
 						<div className="flex gap-3 flex-nowrap mobile:flex-wrap">
-							<AppleStoreIcon className="h-[35px] tabletL:h-[41px]" />
-							<GooglePlayStore className="h-[34px] tabletL:h-[40px]" />
+							<AppleStoreIcon className="h-[33px] tabletL:h-[41px]" />
+							<GooglePlayStore className="h-[33px] tabletL:h-[40px]" />
 						</div>
 					</div>
 					<div className="flex-[7_1_0%] justify-end gap-8 hidden tablet:flex">

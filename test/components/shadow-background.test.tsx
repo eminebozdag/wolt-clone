@@ -10,7 +10,7 @@ describe("<ShadowBackground/>", () => {
 		render(<ShadowBackground {...props} />);
 
 		// Assert
-		expect(screen.getByTestId("shadowBg-component")).not.toBeNull();
+		expect(screen.getByTestId("shadow-background-component")).not.toBeNull();
 	});
 
 	it("should have modal classname when type is modal", () => {
@@ -21,7 +21,7 @@ describe("<ShadowBackground/>", () => {
 		render(<ShadowBackground {...props} />);
 
 		// Assert
-		expect(screen.getByTestId("shadowBg-component")).toHaveClass("bg-c-font-gray/70");
+		expect(screen.getByTestId("shadow-background-component")).toHaveClass("bg-c-font-gray/70");
 	});
 
 	it("should have children if children props exist", () => {
@@ -33,6 +33,6 @@ describe("<ShadowBackground/>", () => {
 
 		//Assert
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(screen.getByTestId("shadowBg-component").children.length).not.toBe(0);
+		expect(screen.getByTestId("shadow-background-component").children.length).not.toBe(0);
 	});
 });

@@ -12,7 +12,7 @@ const ShadowBackground = (props: Props) => {
 	};
 
 	return (
-		<div className={clsx("top-0 right-0 left-0 w-full h-full", type && styles[type], className)} data-testid="shadowBg-component">
+		<div className={clsx("top-0 right-0 left-0 w-full h-full", type && styles[type], className)} data-testid="shadow-background-component">
 			{children}
 		</div>
 	);

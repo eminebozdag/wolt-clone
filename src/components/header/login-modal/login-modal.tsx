@@ -31,8 +31,8 @@ const LoginModal = (props: Props) => {
 						<div className="w-full p-[14px] tabletL:p-4">
 							<div className="flex flex-col justify-between">
 								<div className="mb-[21px] tabletL:mb-6">
-									<h2 className={clsx("font-header font-[600]", "text-lg tabletL:text-clg", "mb-[7px] tabletL:mb-2")}>Create an account or log in</h2>
-									<div className={clsx("text-c-font-gray", "mt-4 tabletL:mt-4", "text-xs tabletL:text-sm")}>Log in below or create a new Wolt account.</div>
+									<h2 className={clsx("font-header font-[600]", "text-lg tabletL:text-clg", "mb-[7px] tabletL:mb-8")}>Create an account or log in</h2>
+									<div className={clsx("text-c-font-gray", "mt-4 ", "text-xs tabletL:text-sm")}>Log in below or create a new Wolt account.</div>
 								</div>
 								<div className="flex flex-col text-xs tabletL:text-sm">
 									{SOCIAL_LOGIN.map((data) => {
@@ -40,7 +40,7 @@ const LoginModal = (props: Props) => {
 											<div className="relative mt-2">
 												<Button variant={"outline"} className={data.style}>
 													<div className="flex flex-row items-center">
-														<div className="flex">{<data.Component height={14} width={14} className="tabletL:h-4 tabletL:w-4" />}</div>
+														<div className="flex">{<data.Component height={16} width={16} className="tabletL:h-4 tabletL:w-4" />}</div>
 														<div className="absolute w-[90%]">{data.text}</div>
 													</div>
 												</Button>
@@ -48,13 +48,13 @@ const LoginModal = (props: Props) => {
 										);
 									})}
 
-									<div className="flex mt-4 items-center">
+									<div className="flex items-center mt-4 tabletL:mt-6 tabletL:mb-2">
 										<hr className="flex grow shrink basis-auto border-c-gray"></hr>
 										<span className="text-c-font-gray mx-4 text-xxs tabletL:text-xs">or log in with email</span>
 										<hr className="flex grow shrink basis-auto border-c-gray"></hr>
 									</div>
 									<Form />
-									<span className={clsx("text-c-gray-medium font-light pt-[7px] mt-[7px]", "text-cxs tabletL:text-xxs")}>
+									<span className={clsx("text-c-gray-medium font-light pt-[7px] my-[7px]", "text-cxs tabletL:text-xxs")}>
 										{"Please visit  "}
 										<a href="https://explore.wolt.com/en/deu/privacy" target="_blank" rel="noopener noreferrer" className="text-c-blue font-medium">
 											Wolt Privacy Statement

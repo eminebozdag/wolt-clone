@@ -6,20 +6,20 @@ import ShadowBackground from "components/shadow-background";
 import React, {useState} from "react";
 import TextAnimation from "./animation/text-animation";
 interface Props {
-	color: string;
-	image: string;
+	color?: string;
+	image?: string;
 }
 
 const HomeBanner = ({color, image}: Props) => {
 	const [val, setVal] = useState("");
 
 	return (
-		<div className={clsx("flex justify-center items-end overflow-hidden  ", "h-[560px] tabletL:h-[40rem]", color)}>
+		<div className={clsx("flex justify-center items-end overflow-hidden", "h-[560px] tabletL:h-[40rem]", color)} data-testid="home-banner-component">
 			<div className="relative flex justify-start items-end max-w-[75rem] w-full h-full">
 				<img
 					src={`/assets/banner-images/${image}.jpg`}
 					loading="lazy"
-					alt="daily_banner"
+					alt={`${image}_banner`}
 					className="absolute top-0 min-w-[50rem] right-[-40%] mobile:left-[30%]"
 				/>
 				<ShadowBackground type="component" className="mobile:hidden" />
@@ -50,4 +50,5 @@ const HomeBanner = ({color, image}: Props) => {
 		</div>
 	);
 };
+export type {Props};
 export default HomeBanner;
