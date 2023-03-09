@@ -9,7 +9,6 @@ describe("<Container/>", () => {
 		render(<Container {...props} />);
 
 		//Assert
-		// eslint-disable-next-line testing-library/prefer-screen-queries
 		expect(screen.getByTestId("container-component")).not.toBeNull();
 	});
 

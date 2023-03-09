@@ -12,7 +12,8 @@ const VideoSection = () => {
 				"relative items-center mt-[90px] bg-c-white bg-[linear-gradient(#ffff_50%,#F8F8F8_50%)]",
 				"h-[20rem] mobile:h-[550px] desktop:h-[640px] desktopM:h-[730px]",
 				"pb-0 desktopM:pb-[90px]",
-			)}>
+			)}
+			data-testid="video-section-component">
 			<div className="max-w-[1184px] my-0 mx-auto h-full shadow-c-md">
 				<div className="flex relative h-full w-full text-start overflow-hidden">
 					<div className="absolute top-0 left-0 w-full h-full bg-cover bg-[url('https://consumer-static-assets.wolt.com/frontpage-assets/video-cover-image-4.jpg')]"></div>
@@ -55,7 +56,8 @@ const VideoSection = () => {
 										"h-[35px] mobile:h-14 tabletL:h-[60px]",
 										"w-[35px] mobile:w-14 tabletL:w-[60px]",
 										hover && "transition duration-300 ease-in-out scale-110",
-									)}>
+									)}
+									data-testid="button-hover">
 									<PlayIcon className={clsx("fill-c-font-gray desktop:fill-c-white", "h-10 mobile:h-14", "w-10 mobile:w-14")} />
 								</div>
 								<span className={clsx("text-c-blue my-auto ml-3", "text-base desktop:text-md", "hidden mobile:inline-flex")}>Watch video</span>

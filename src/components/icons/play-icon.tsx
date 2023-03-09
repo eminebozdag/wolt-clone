@@ -1,7 +1,7 @@
 import SVGProps from "./types";
 const PlayIcon = ({height, width, className, ...props}: SVGProps) => {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 60 60" {...props} className={className}>
+		<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 60 60" {...props} className={className} data-testid="play-icon">
 			<path
 				fillRule="evenodd"
 				clipRule="evenodd"
