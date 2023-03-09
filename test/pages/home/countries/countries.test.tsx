@@ -9,6 +9,7 @@ describe("<Countries/>", () => {
 		render(<Countries />);
 
 		// Assert
+		expect(screen.getByTestId("countries-component")).not.toBeNull();
 		expect(screen.getByTestId("container-component")).not.toBeNull();
 		expect(screen.getByTitle("countries_title").textContent).toBe("Explore countries where you find Wolt");
 		const countryInCountries = within(screen.getByTestId("container-component")).getAllByTestId("country-component");

@@ -9,6 +9,7 @@ describe("<ApplyJobCarousel/>", () => {
 		render(<ApplyJobCarousel />);
 
 		// Assert
+		expect(screen.getByTestId("apply-job-carousel-component")).not.toBeNull();
 		expect(screen.getByTestId("container-component")).not.toBeNull();
 		const cardsInContainer = within(screen.getByTestId("container-component")).getAllByTestId("card-component");
 		expect(cardsInContainer.length).toBe(3);
