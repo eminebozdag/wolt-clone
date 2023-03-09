@@ -31,6 +31,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"test:cov": "react-scripts test --env=jsdom --watchAll=false --coverage",
 		"eject": "react-scripts eject",
 		"format": "prettier --write ."
 	},
@@ -61,5 +62,11 @@
 		"react-test-renderer": "^18.2.0",
 		"tailwindcss": "^3.2.4",
 		"ts-jest": "^29.0.5"
-	}
+	},
+	"collectCoverageFrom": [
+		"src/**/*.{ts,tsx}",
+		"!src/index.tsx",
+		"!src/**/*.{config.ts}",
+		"!src/pages/page.config.ts"
+	]
 }

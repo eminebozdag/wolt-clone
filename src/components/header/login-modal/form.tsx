@@ -25,7 +25,11 @@ const Form = () => {
 		<form className="flex flex-col mt-4" onSubmit={handleSubmit} data-testid="form-component">
 			<Input label="Email" type="email" value={val} onChange={(e: any) => handleChange(e.target.value)} />
 
-			{error && <span className={clsx("text-red-500 text-cxs font-light mx-4 mt-2", "transition duration-500 ease-in-out")}>{error}</span>}
+			{error && (
+				<span className={clsx("text-red-500 text-cxs font-light mx-4 mt-2", "transition duration-500 ease-in-out")} data-testid="error-span">
+					{error}
+				</span>
+			)}
 
 			<Button hover variant="primary" className="justify-center mt-4 py-4">
 				Next

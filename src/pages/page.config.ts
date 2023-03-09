@@ -1,4 +1,3 @@
-import DiscoveryPage from "./discovery/page";
 import HomePage from "./home/page";
 
 const PAGES = [
@@ -7,12 +6,6 @@ const PAGES = [
 		route: "/",
 		exact: true,
 		Component: HomePage,
-	},
-	{
-		title: "Discovery",
-		route: "en/discovery",
-		exact: false,
-		Component: DiscoveryPage,
 	},
 ];
 
