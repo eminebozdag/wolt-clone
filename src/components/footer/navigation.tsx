@@ -16,7 +16,7 @@ const Navigation = (data: Props) => {
 				<ul className="flex flex-col gap-1 tabletL:gap-2" data-testid="data-tags">
 					{data.tags?.map((tag) => {
 						return (
-							<li>
+							<li key={tag.tag_title}>
 								<a href={tag.route} className="text-c-white font-normal cursor-pointer hover:underline text-xxs tabletL:text-xs">
 									{tag.tag_title}
 								</a>

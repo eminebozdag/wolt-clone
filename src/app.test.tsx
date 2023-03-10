@@ -1,6 +1,6 @@
 import {screen} from "@testing-library/react";
 import {render} from "tests/test-util";
-import LoginButton from "../../../components/header/login-button";
+import App from "./App";
 
 describe("<LoginButton/>", () => {
 	it("should render successfully", () => {
@@ -8,10 +8,9 @@ describe("<LoginButton/>", () => {
 		const preloadedState = {globalReducer: {showLoginModal: false}};
 
 		//Act
-		render(<LoginButton />, {preloadedState});
+		render(<App />, {preloadedState});
 
 		//Assert
-		expect(screen.getByTestId("login-component")).not.toBeNull();
-		expect(screen.getByTestId("popover-component")).not.toBeNull();
+		expect(screen.getByTestId("app-component")).not.toBeNull();
 	});
 });

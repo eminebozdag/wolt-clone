@@ -4,6 +4,7 @@ import React from "react";
 interface Props {
 	variant?: "primary" | "secondary" | "outline" | "FAB" | "flat" | "toolbar";
 	hover?: boolean;
+	type?: "submit";
 
 	children?: any;
 	className?: string;

@@ -1,23 +1,14 @@
-import {render, screen} from "@testing-library/react";
-import {Provider} from "react-redux";
-import {createStore} from "redux";
+import {screen} from "@testing-library/react";
+import {render} from "tests/test-util";
 import Layout, {Props} from "../../components/layout";
-import reducers from "../../store/combine";
 
-const mockStore = createStore(reducers, {
-	globalReducer: {},
-} as any);
 describe("<Layout/>", () => {
 	it("should render successfully", () => {
 		// Arrange
-		const component = (
-			<Provider store={mockStore}>
-				<Layout />
-			</Provider>
-		);
+		const preloadedState = {globalReducer: {showLoginModal: false}};
 
-		// Act
-		render(component);
+		//Act
+		render(<Layout />, {preloadedState});
 
 		// Assert
 		expect(screen.getByTestId("layout-component")).not.toBeNull();
@@ -27,15 +18,11 @@ describe("<Layout/>", () => {
 
 	it("should have children if children props exist", () => {
 		// Arrange
+		const preloadedState = {globalReducer: {showLoginModal: false}};
 		const props: Props = {children: <div></div>};
-		const component = (
-			<Provider store={mockStore}>
-				<Layout {...props} />
-			</Provider>
-		);
 
 		// Act
-		render(component);
+		render(<Layout {...props} />, {preloadedState});
 
 		// Assert
 		// eslint-disable-next-line testing-library/no-node-access

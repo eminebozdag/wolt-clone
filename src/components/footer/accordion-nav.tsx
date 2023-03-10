@@ -28,7 +28,7 @@ const AccordionNavigation = (data: Props) => {
 				<ul className="flex flex-col pt-[10.5px] pb-[21px] gap-2">
 					{data.tags?.map((tag) => {
 						return (
-							<li>
+							<li key={tag.tag_title}>
 								<a href={tag.route} className="text-c-white text-xxs cursor-pointer hover:underline">
 									{tag.tag_title}
 								</a>

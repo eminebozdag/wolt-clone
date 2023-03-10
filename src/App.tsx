@@ -22,7 +22,7 @@ function App() {
 	};
 
 	return (
-		<div data-testid="app" className="app">
+		<div data-testid="app-component">
 			<BrowserRouter>
 				<Routes>
 					{PAGES.map((page) => {

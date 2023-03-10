@@ -41,15 +41,15 @@ describe("<Form/>", () => {
 		expect(screen.queryByTestId("error-span")).toBeNull();
 	});
 
-	/*it("should click event can work properly if form submit", () => {
+	it("should click event can work properly if form submit", () => {
 		//Arrange
 		const mockOnSubmit = jest.fn();
 
 		//Act
-		render(<Form />);
-		fireEvent.submit(screen.getByTestId("button-component"));
+		render(<Form onSubmit={mockOnSubmit} />);
+		fireEvent.submit(screen.getByTestId("form-component"));
 
 		//Assert
 		expect(mockOnSubmit).toHaveBeenCalledTimes(1);
-	});*/
+	});
 });

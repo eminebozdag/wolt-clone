@@ -26,10 +26,10 @@ describe("<Country/>", () => {
 		expect(screen.getByAltText(/4_Thursday_banner/i)).not.toBeNull();
 		expect(screen.getByTestId("home-banner-component")).toHaveClass("bg-c-lavender");
 	});
+
 	it("should input change event can work properly", () => {
 		//Arrange
 		const expectedSearchText = "search text";
-
 		const props: Props = {};
 
 		//Act

@@ -3,7 +3,12 @@ import React, {useState} from "react";
 import Button from "../../button";
 import Input from "../../input";
 
-const Form = () => {
+interface Props {
+	onSubmit?(e: any): void;
+}
+
+const Form = (props: Props) => {
+	const {onSubmit} = props;
 	const [val, setVal] = useState("");
 	const [error, setError] = useState("");
 
@@ -16,13 +21,8 @@ const Form = () => {
 		setVal(cur);
 	};
 
-	const handleSubmit = (e: any) => {
-		isValidEmail(val) && alert("success status");
-		e.preventDefault();
-	};
-
 	return (
-		<form className="flex flex-col mt-4" onSubmit={handleSubmit} data-testid="form-component">
+		<form className="flex flex-col mt-4" onSubmit={(e: any) => onSubmit && onSubmit(val)} data-testid="form-component">
 			<Input label="Email" type="email" value={val} onChange={(e: any) => handleChange(e.target.value)} />
 
 			{error && (
@@ -31,7 +31,7 @@ const Form = () => {
 				</span>
 			)}
 
-			<Button hover variant="primary" className="justify-center mt-4 py-4">
+			<Button type="submit" hover variant="primary" className="justify-center mt-4 py-4">
 				Next
 			</Button>
 		</form>

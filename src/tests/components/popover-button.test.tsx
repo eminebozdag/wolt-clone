@@ -24,7 +24,7 @@ describe("<PopoverButton/>", () => {
 		expect(screen.getByTestId("popover-component")).toHaveClass("flex-col");
 	});
 
-	it("popover button should render successfully when open is true and button, click event passed as a props", () => {
+	it("should popover button render successfully when open is true and click event passed as a props", () => {
 		//Arrange
 		const props: Props = {open: true, button: <button></button>};
 		const mockOnClick = jest.fn();
@@ -55,5 +55,18 @@ describe("<PopoverButton/>", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(popoverChildren.children.length).not.toBe(0);
 		expect(popoverChildren).toHaveClass("bg-c-white");
+	});
+
+	it("should click event can work properly", () => {
+		//Arrange
+		const props: Props = {};
+		const mockOnClick = jest.fn();
+
+		//Act
+		render(<PopoverButton onClick={mockOnClick} {...props} />);
+		fireEvent.click(screen.getByTestId("popover-button"));
+
+		//Assert
+		expect(mockOnClick).toHaveBeenCalledTimes(1);
 	});
 });

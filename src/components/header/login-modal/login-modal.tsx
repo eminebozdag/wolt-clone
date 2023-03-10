@@ -11,6 +11,15 @@ interface Props {
 
 const LoginModal = (props: Props) => {
 	const {onClickAway} = props;
+
+	function isValidEmail(email: any) {
+		return /\S+@\S+\.\S+/.test(email);
+	}
+
+	const handleSubmit = (e: any) => {
+		isValidEmail(e) ? alert("success status") : e.preventDefault();
+	};
+
 	return (
 		<ClickAwayListener onClickAway={() => onClickAway && onClickAway()}>
 			<div
@@ -37,7 +46,7 @@ const LoginModal = (props: Props) => {
 								<div className="flex flex-col text-xs tabletL:text-sm">
 									{SOCIAL_LOGIN.map((data) => {
 										return (
-											<div className="relative mt-2">
+											<div key={data.title} className="relative mt-2">
 												<Button variant={"outline"} className={data.style}>
 													<div className="flex flex-row items-center">
 														<div className="flex">{<data.Component height={16} width={16} className="tabletL:h-4 tabletL:w-4" />}</div>
@@ -53,7 +62,7 @@ const LoginModal = (props: Props) => {
 										<span className="text-c-font-gray mx-4 text-xxs tabletL:text-xs">or log in with email</span>
 										<hr className="flex grow shrink basis-auto border-c-gray"></hr>
 									</div>
-									<Form />
+									<Form onSubmit={(e: any) => handleSubmit(e)} />
 									<span className={clsx("text-c-gray-medium font-light pt-[7px] my-[7px]", "text-cxs tabletL:text-xxs")}>
 										{"Please visit  "}
 										<a href="https://explore.wolt.com/en/deu/privacy" target="_blank" rel="noopener noreferrer" className="text-c-blue font-medium">

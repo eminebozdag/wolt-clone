@@ -13,7 +13,6 @@ const LoginButton = () => {
 
 	const handleLogin = () => {
 		dispatch(dispatchShowLoginModal(true));
-		console.log("clicked me");
 		setPopover(false);
 	};
 

@@ -17,7 +17,7 @@ const ApplyJobCarousel = () => {
 			</h2>
 			<div className={clsx("block desktop:flex w-full gap-6", "mobile:mt-[35px] tabletL:mt-10")}>
 				{CARD_DATA.map((data) => (
-					<Card {...data} />
+					<Card key={data.title} {...data} />
 				))}
 			</div>
 		</Container>
