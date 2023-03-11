@@ -1,6 +1,6 @@
 import {render, screen} from "@testing-library/react";
+import DownloadApp from "pages/home/download-app";
 import React from "react";
-import DownloadApp from "../../../pages/home/download-app";
 
 describe("<DownloadApp/>", () => {
 	it("should render successfully", () => {

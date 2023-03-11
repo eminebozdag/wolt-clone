@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from "@testing-library/react";
-import Button, {Props} from "../../components/button";
+import Button, {Props} from "components/button";
 
 describe("<Button/>", () => {
 	it("should render successfully", () => {

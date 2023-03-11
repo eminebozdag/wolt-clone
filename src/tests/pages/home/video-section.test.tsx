@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from "@testing-library/react";
-import VideoSection from "../../../pages/home/video-section";
+import VideoSection from "pages/home/video-section";
 
 describe("<VideoSection/>", () => {
 	it("should render successfully", () => {

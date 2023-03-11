@@ -1,7 +1,7 @@
 import clsx from "clsx";
+import Button from "components/button";
+import DownArrow from "components/icons/down-arrow";
 import {useState} from "react";
-import Button from "../button";
-import DownArrow from "../icons/down-arrow";
 
 interface Props {
 	title?: string;

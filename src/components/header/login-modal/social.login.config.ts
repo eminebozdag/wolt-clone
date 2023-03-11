@@ -1,6 +1,6 @@
-import AppleIcon from "../../icons/socials/appleIcon";
-import FacebookIcon from "../../icons/socials/facebookIcon";
-import GoogleIcon from "../../icons/socials/googleIcon";
+import AppleIcon from "components/icons/socials/appleIcon";
+import FacebookIcon from "components/icons/socials/facebookIcon";
+import GoogleIcon from "components/icons/socials/googleIcon";
 
 const SOCIAL_LOGIN = [
 	{

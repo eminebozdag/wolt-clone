@@ -1,11 +1,11 @@
 import clsx from "clsx";
+import Button from "components/button";
+import LoginToolbar from "components/header/login-toolbar";
+import UserIcon from "components/icons/user-icon";
+import PopoverButton from "components/popover-button";
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
-import {dispatchShowLoginModal} from "../../store/actions/globalActions";
-import Button from "../button";
-import UserIcon from "../icons/user-icon";
-import PopoverButton from "../popover-button";
-import LoginToolbar from "./login-toolbar";
+import {dispatchShowLoginModal} from "store/actions/globalActions";
 
 const LoginButton = () => {
 	const [popover, setPopover] = useState(false);

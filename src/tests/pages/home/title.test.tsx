@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import Title from "../../../pages/home/title";
+import Title from "pages/home/title";
 
 describe("<Title/>", () => {
 	it("should render successfully", () => {

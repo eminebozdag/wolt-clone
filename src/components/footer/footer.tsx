@@ -1,12 +1,12 @@
 import clsx from "clsx";
+import Button from "components/button";
+import AccordionNavigation from "components/footer/accordion-nav";
+import {LEGAL_INFO, NAVIGATION_DATA, SETTINGS} from "components/footer/footer.config";
+import Navigation from "components/footer/navigation";
+import AppleStoreIcon from "components/icons/store/app-store";
+import GooglePlayStore from "components/icons/store/play-store";
+import WoltLogo from "components/icons/wolt-logo";
 import React from "react";
-import Button from "../button";
-import AppleStoreIcon from "../icons/store/app-store";
-import GooglePlayStore from "../icons/store/play-store";
-import WoltLogo from "../icons/wolt-logo";
-import AccordionNavigation from "./accordion-nav";
-import {LEGAL_INFO, NAVIGATION_DATA, SETTINGS} from "./footer.config";
-import Navigation from "./navigation";
 
 const Footer = () => {
 	return (

@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import Container, {Props} from "../../components/container";
+import Container, {Props} from "components/container";
 describe("<Container/>", () => {
 	it("should render successfully", () => {
 		//Arrange

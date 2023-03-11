@@ -1,7 +1,7 @@
 import clsx from "clsx";
+import Button from "components/button";
+import Input from "components/input";
 import React, {useState} from "react";
-import Button from "../../button";
-import Input from "../../input";
 
 interface Props {
 	onSubmit?(e: any): void;

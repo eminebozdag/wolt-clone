@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import Card, {Props} from "../../../../pages/home/carousel/card";
+import Card, {Props} from "pages/home/carousel/card";
 
 describe("<Card/>", () => {
 	it("should render successfully", () => {

@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from "@testing-library/react";
-import AccordionNavigation, {Props} from "../../../components/footer/accordion-nav";
+import AccordionNavigation, {Props} from "components/footer/accordion-nav";
 
 describe("<AccordionNavigation/>", () => {
 	it("should render successfully", () => {

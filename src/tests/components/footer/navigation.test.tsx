@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import Navigation from "../../../components/footer/navigation";
+import Navigation from "components/footer/navigation";
 
 describe("<Navigation/>", () => {
 	it("should render successfully", () => {

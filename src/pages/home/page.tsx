@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "components/layout";
 import ApplyJobCarousel from "./carousel/apply-job-carousel";
 import Countries from "./countries/countries";
 import DownloadApp from "./download-app";

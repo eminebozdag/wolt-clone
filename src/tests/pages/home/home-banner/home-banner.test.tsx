@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from "@testing-library/react";
-import HomeBanner, {Props} from "../../../../pages/home/home-banner/home-banner";
+import HomeBanner, {Props} from "pages/home/home-banner/home-banner";
 
 describe("<Country/>", () => {
 	it("should render successfully", () => {

@@ -1,6 +1,6 @@
-import AccessibilityIcon from "../icons/accessibility-icon";
-import LanguageIcon from "../icons/language-icon";
-import PinIcon from "../icons/pin-icon";
+import AccessibilityIcon from "components/icons/accessibility-icon";
+import LanguageIcon from "components/icons/language-icon";
+import PinIcon from "components/icons/pin-icon";
 
 export const NAVIGATION_DATA = [
 	{

@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import TextAnimation from "../../../../pages/home/home-banner/animation/text-animation";
+import TextAnimation from "pages/home/home-banner/animation/text-animation";
 
 describe("<TextAnimation/>", () => {
 	it("should render successfully", () => {

@@ -1,6 +1,6 @@
 import {screen} from "@testing-library/react";
+import LoginButton from "components/header/login-button";
 import {render} from "tests/test-util";
-import LoginButton from "../../../components/header/login-button";
 
 describe("<LoginButton/>", () => {
 	it("should render successfully", () => {

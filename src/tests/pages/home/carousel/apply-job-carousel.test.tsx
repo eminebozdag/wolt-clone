@@ -1,5 +1,5 @@
 import {render, screen, within} from "@testing-library/react";
-import ApplyJobCarousel from "../../../../pages/home/carousel/apply-job-carousel";
+import ApplyJobCarousel from "pages/home/carousel/apply-job-carousel";
 
 describe("<ApplyJobCarousel/>", () => {
 	it("should render successfully", () => {

@@ -1,5 +1,5 @@
-import {GlobalActionType} from "../../../store/actions/globalActions";
-import globalReducer from "../../../store/reducers/globalReducer";
+import {GlobalActionType} from "store/actions/globalActions";
+import globalReducer from "store/reducers/globalReducer";
 
 describe("globalReducer", () => {
 	it("should return initial state", () => {

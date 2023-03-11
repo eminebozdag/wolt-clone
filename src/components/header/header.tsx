@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import Container from "../container";
-import WoltLogo from "../icons/wolt-logo";
-import LoginButton from "./login-button";
+import Container from "components/container";
+import LoginButton from "components/header/login-button";
+import WoltLogo from "components/icons/wolt-logo";
 
 const Header = () => {
 	return (

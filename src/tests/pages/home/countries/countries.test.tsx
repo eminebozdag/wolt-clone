@@ -1,5 +1,5 @@
 import {render, screen, within} from "@testing-library/react";
-import Countries from "../../../../pages/home/countries/countries";
+import Countries from "pages/home/countries/countries";
 
 describe("<Countries/>", () => {
 	it("should render successfully", () => {

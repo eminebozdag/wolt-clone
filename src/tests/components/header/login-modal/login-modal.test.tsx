@@ -1,5 +1,5 @@
 import {render, screen, within} from "@testing-library/react";
-import LoginModal from "../../../../components/header/login-modal/login-modal";
+import LoginModal from "components/header/login-modal/login-modal";
 
 describe("<LoginModal/>", () => {
 	it("should render successfully", () => {

@@ -1,7 +1,7 @@
 import clsx from "clsx";
+import DownArrow from "components/icons/down-arrow";
 import React from "react";
 import ClickAwayListener from "react-click-away-listener";
-import DownArrow from "./icons/down-arrow";
 
 interface Props {
 	open?: boolean;

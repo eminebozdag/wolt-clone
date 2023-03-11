@@ -1,6 +1,6 @@
 import {screen} from "@testing-library/react";
+import Layout, {Props} from "components/layout";
 import {render} from "tests/test-util";
-import Layout, {Props} from "../../components/layout";
 
 describe("<Layout/>", () => {
 	it("should render successfully", () => {

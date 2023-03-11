@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import Button from "components/button";
+import Form from "components/header/login-modal/form";
 import CloseIcon from "components/icons/close-icon";
 import React from "react";
 import ClickAwayListener from "react-click-away-listener";
-import Form from "./form";
 import SOCIAL_LOGIN from "./social.login.config";
 interface Props {
 	onClickAway?(): void;

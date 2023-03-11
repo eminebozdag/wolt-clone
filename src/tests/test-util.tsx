@@ -4,7 +4,7 @@ import {render as rtlRender, RenderOptions} from "@testing-library/react";
 import React, {ReactElement} from "react";
 import {Provider} from "react-redux";
 import type {RootState} from "store/combine";
-import globalReducer from "../store/reducers/globalReducer";
+import globalReducer from "store/reducers/globalReducer";
 
 type ReducerTypes = Pick<RootState, "globalReducer">;
 type TStore = EnhancedStore<ReducerTypes>;

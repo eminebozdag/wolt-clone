@@ -1,6 +1,6 @@
+import Button from "components/button";
+import TriangleIcon from "components/icons/triangle-icon";
 import {CSSTransition} from "react-transition-group";
-import Button from "../button";
-import TriangleIcon from "../icons/triangle-icon";
 
 interface Props {
 	show: boolean;

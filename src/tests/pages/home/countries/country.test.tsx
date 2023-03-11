@@ -1,5 +1,5 @@
 import {render, screen} from "@testing-library/react";
-import Country, {Props} from "../../../../pages/home/countries/country";
+import Country, {Props} from "pages/home/countries/country";
 
 describe("<Country/>", () => {
 	it("should render successfully", () => {
