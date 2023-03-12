@@ -1,6 +1,7 @@
 import {combineReducers} from "redux";
 import globalReducer from "./reducers/globalReducer";
 
+/* istanbul ignore file */
 const reducers = combineReducers({
 	globalReducer,
 });

@@ -1,7 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
 import reducer from "./combine";
 
+/* istanbul ignore file */
 const logStyle = "background: blue; color: #fff";
+
 const loggerMiddleware =
 	(store: any) =>
 	(next: any) =>

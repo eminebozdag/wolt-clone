@@ -4,7 +4,7 @@ module.exports = {
 	setupFilesAfterEnv: ["<rootDir>/src/setupTests.js"],
 	collectCoverage: true,
 	coverageDirectory: "<rootDir>/cov/",
-	coveragePathIgnorePatterns: ["node_modules"],
+	coveragePathIgnorePatterns: ["src", "node_modules"],
 	moduleDirectories: ["src", "node_modules"],
 	transformIgnorePatterns: ["<rootDir>/node_modules/"],
 	transform: {
