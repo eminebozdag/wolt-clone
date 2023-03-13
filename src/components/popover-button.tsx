@@ -24,7 +24,7 @@ const PopoverButton: React.FC<Props> = (props: Props) => {
 				className={clsx(
 					"relative flex items-center",
 					"bg-c-gray-light hover:bg-c-gray rounded-full cursor-pointer",
-					"p-[2px] tabletL:p-[4px]",
+					"p-[2px] tabletL:p-[3px]",
 					className,
 				)}
 				data-testid="popover-component">
@@ -35,7 +35,7 @@ const PopoverButton: React.FC<Props> = (props: Props) => {
 					</div>
 				</div>
 				{open && (
-					<div className={clsx("absolute top-12 right-0 z-50", popoverClassName)} data-testid="popover-children">
+					<div className={clsx("absolute top-[42px] tabletL:top-12 right-0 z-50", popoverClassName)} data-testid="popover-children">
 						{children}
 					</div>
 				)}

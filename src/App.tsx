@@ -25,8 +25,8 @@ function App() {
 		<div data-testid="app-component">
 			<BrowserRouter>
 				<Routes>
-					{PAGES.map((page) => {
-						return <Route key={page.title} path={page.route} element={<page.Component />} />;
+					{PAGES.map((page, index) => {
+						return <Route key={index} path={page.route} element={<page.Component />} />;
 					})}
 				</Routes>
 			</BrowserRouter>

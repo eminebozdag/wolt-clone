@@ -32,7 +32,11 @@ const LoginButton = () => {
 				<div className="flex items-center">
 					<PopoverButton
 						button={
-							<UserIcon height={30} width={30} className={clsx("bg-c-white rounded-full", "border-1 border-c-white", "tabletL:h-[34px] tabletL:w-[34px]")} />
+							<UserIcon
+								height={30}
+								width={30}
+								className={clsx("bg-c-white rounded-full", "border-1.5 border-c-white", "tabletL:h-[34px] tabletL:w-[34px]")}
+							/>
 						}
 						open={popover}
 						onClickAway={() => setPopover(false)}

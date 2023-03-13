@@ -16,8 +16,8 @@ const ApplyJobCarousel = () => {
 				Hungry for more than food?
 			</h2>
 			<div className={clsx("block desktop:flex w-full gap-6", "mobile:mt-[35px] tabletL:mt-10")}>
-				{CARD_DATA.map((data) => (
-					<Card key={data.title} {...data} />
+				{CARD_DATA.map((data, index) => (
+					<Card key={index} {...data} />
 				))}
 			</div>
 		</Container>

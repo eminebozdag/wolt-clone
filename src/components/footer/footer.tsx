@@ -18,25 +18,25 @@ const Footer = () => {
 					<div className="flex flex-col flex-[2_1_0%]">
 						<WoltLogo color="white" height={26} width={72} className="mb-[24.5px] mobile:mb-7" />
 						<div className="flex gap-3 flex-nowrap mobile:flex-wrap">
-							<AppleStoreIcon className="h-[33px] tabletL:h-[41px]" />
-							<GooglePlayStore className="h-[32px] tabletL:h-[40px]" />
+							<AppleStoreIcon className="h-[35px] tabletL:h-[41px]" />
+							<GooglePlayStore className="h-[34px] tabletL:h-[40px]" />
 						</div>
 					</div>
 					<div className="flex-[7_1_0%] justify-end gap-8 hidden tablet:flex">
-						{NAVIGATION_DATA.map((data) => (
-							<Navigation key={data.title} {...data} />
+						{NAVIGATION_DATA.map((data, index) => (
+							<Navigation key={index} {...data} />
 						))}
 					</div>
 					<div className="flex tablet:hidden flex-col mx-[-15px] mobile:mx-[-30px]">
-						{NAVIGATION_DATA.map((data) => (
-							<AccordionNavigation key={data.title} {...data} />
+						{NAVIGATION_DATA.map((data, index) => (
+							<AccordionNavigation key={index} {...data} />
 						))}
 					</div>
 				</div>
 				<div className={clsx("flex justify-between gap-4 flex-wrap", "flex-col tabletM:flex-row", "text-cxs tabletL:text-xxs")}>
 					<div className="flex flex-row flex-wrap gap-4 mobile:gap-6">
-						{SETTINGS.map((data) => (
-							<Button variant="flat" key={data.title}>
+						{SETTINGS.map((data, index) => (
+							<Button variant="flat" key={index}>
 								<div className="flex justify-center items-center h-4 w-4">{<data.Component height={10} width={10} />}</div>
 								{data.title}
 							</Button>
@@ -44,8 +44,8 @@ const Footer = () => {
 					</div>
 					<div className="flex flex-row flex-wrap justify-between items-center gap-2">
 						<nav className="flex justify-between items-center gap-6 text-c-white/75 tablet:text-c-white">
-							{LEGAL_INFO.map((data) => (
-								<a key={data.title} href={data.route} className="hover:underline">
+							{LEGAL_INFO.map((data, index) => (
+								<a key={index} href={data.route} className="hover:underline">
 									{data.title}
 								</a>
 							))}

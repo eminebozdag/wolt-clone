@@ -44,9 +44,9 @@ const LoginModal = (props: Props) => {
 									<div className={clsx("text-c-font-gray", "mt-4 ", "text-xs tabletL:text-sm")}>Log in below or create a new Wolt account.</div>
 								</div>
 								<div className="flex flex-col text-xs tabletL:text-sm">
-									{SOCIAL_LOGIN.map((data) => {
+									{SOCIAL_LOGIN.map((data, index) => {
 										return (
-											<div key={data.title} className="relative mt-2">
+											<div key={index} className="relative mt-2">
 												<Button variant={"outline"} className={data.style}>
 													<div className="flex flex-row items-center">
 														<div className="flex">{<data.Component height={16} width={16} className="tabletL:h-4 tabletL:w-4" />}</div>

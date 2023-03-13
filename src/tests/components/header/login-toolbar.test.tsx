@@ -29,4 +29,17 @@ describe("<LoginToolbar/>", () => {
 		//Assert
 		expect(mockOnClick).toHaveBeenCalledTimes(1);
 	});
+
+	/*it("should click event can trigger login modal properly", async () => {
+		//Arrange
+		const props: Props = {show: true};
+		const mockOnClick = jest.fn();
+
+		//Act
+		render(<LoginToolbar onLogin={mockOnClick} {...props} />);
+		fireEvent.click(screen.getByRole("button", {name: /Login or register/i}));
+
+		//Assert
+		expect(screen.getByTestId("login-modal-component")).not.toBeNull();
+	});*/
 });
