@@ -22,8 +22,8 @@ const Countries = () => {
 				</section>
 				<div>
 					<div className="flex-1 grid gap-x-6 gap-y-2 mobile:gap-y-4 grid-cols-1 mobile:grid-cols-auto">
-						{COUNTRIES.map((data) => (
-							<Country {...data} />
+						{COUNTRIES.map((data, index) => (
+							<Country key={index} {...data} />
 						))}
 					</div>
 				</div>

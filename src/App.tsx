@@ -1,26 +1,8 @@
-import LoginModal from "components/header/login-modal/login-modal";
-import ShadowBackground from "components/shadow-background";
 import PAGES from "pages/page.config";
-import React, {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {dispatchShowLoginModal} from "store/actions/globalActions";
 
 function App() {
-	const {showLoginModal} = useSelector((state: any) => state.globalReducer);
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		showLoginModal && (document.body.style.overflow = "hidden");
-		return () => {
-			document.body.style.overflow = "scroll";
-		};
-	});
-
-	const handleDispatch = () => {
-		dispatch(dispatchShowLoginModal(false));
-	};
-
 	return (
 		<div data-testid="app-component">
 			<BrowserRouter>
@@ -30,12 +12,6 @@ function App() {
 					})}
 				</Routes>
 			</BrowserRouter>
-
-			{showLoginModal && (
-				<ShadowBackground type="modal">
-					<LoginModal onClickAway={handleDispatch} />
-				</ShadowBackground>
-			)}
 		</div>
 	);
 }

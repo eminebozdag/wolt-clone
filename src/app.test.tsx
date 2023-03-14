@@ -5,10 +5,9 @@ import {render} from "tests/test-util";
 describe("<LoginButton/>", () => {
 	it("should render successfully", () => {
 		//Arrange
-		const preloadedState = {globalReducer: {showLoginModal: false}};
 
 		//Act
-		render(<App />, {preloadedState});
+		render(<App />);
 
 		//Assert
 		expect(screen.getByTestId("app-component")).not.toBeNull();
