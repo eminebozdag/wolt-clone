@@ -12,14 +12,6 @@ interface Props {
 const LoginModal = (props: Props) => {
 	const {onClickAway} = props;
 
-	function isValidEmail(email: any) {
-		return /\S+@\S+\.\S+/.test(email);
-	}
-
-	const handleSubmit = (e: any) => {
-		isValidEmail(e) ? alert("success status") : e.preventDefault();
-	};
-
 	return (
 		<ClickAwayListener onClickAway={() => onClickAway && onClickAway()}>
 			<div
@@ -32,7 +24,7 @@ const LoginModal = (props: Props) => {
 				<div className="bg-c-white shadow-c-md rounded-2xl z-20">
 					<div className="relative pt-[63px] tabletL:pt-[72px]">
 						<div className="absolute right-4 top-4">
-							<Button variant="FAB" onClick={onClickAway} className="p-[10px]" hover>
+							<Button variant="FAB" onClick={onClickAway} className="p-[10px]" hover aria-label="close">
 								<CloseIcon height={17} width={17} fill={"footer-c-gray"} className="tabletL:h-[20px] tabletL:w-[20px]" />
 							</Button>
 						</div>
@@ -62,7 +54,7 @@ const LoginModal = (props: Props) => {
 										<span className="text-c-font-gray mx-4 text-xxs tabletL:text-xs">or log in with email</span>
 										<hr className="flex grow shrink basis-auto border-c-gray"></hr>
 									</div>
-									<Form onSubmit={(e: any) => handleSubmit(e)} />
+									<Form />
 									<span className={clsx("text-c-gray-medium font-light pt-[7px] my-[7px]", "text-cxs tabletL:text-xxs")}>
 										{"Please visit  "}
 										<a href="https://explore.wolt.com/en/deu/privacy" target="_blank" rel="noopener noreferrer" className="text-c-blue font-medium">
