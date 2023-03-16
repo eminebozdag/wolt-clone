@@ -25,6 +25,7 @@ describe("<VideoSection/>", () => {
 		//Assert
 		expect(screen.getByTestId("button-hover")).toHaveClass("transition");
 	});
+
 	it("should have not classname if hover does not exist", () => {
 		//Arrange
 

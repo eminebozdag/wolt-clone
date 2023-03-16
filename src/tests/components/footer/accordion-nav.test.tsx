@@ -24,7 +24,6 @@ describe("<AccordionNavigation/>", () => {
 		fireEvent.click(screen.getByTestId("button-component"));
 
 		//Assert
-
 		expect(screen.getByTestId("down-arrow-icon")).toHaveClass("rotate-180");
 	});
 });
