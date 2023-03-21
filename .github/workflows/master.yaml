@@ -64,7 +64,7 @@ jobs:
      with:
       start: yarn start
       wait-on: http://127.0.0.1:3000
-      wait-on-timeout: 180
+      wait-on-timeout: 210
       browser: chrome
 
    - uses: actions/upload-artifact@v2
