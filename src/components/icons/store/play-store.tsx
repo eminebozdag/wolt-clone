@@ -14,7 +14,7 @@ const GooglePlayStore = (props: Props) => {
 			<img
 				aria-label="Download the Wolt Android app on Google Play"
 				src="https://consumer-static-assets.wolt.com/app-store-badges/google-play-badge_en.png"
-				className={clsx("inline-block max-w-full align-middle h-10", className)}></img>
+				className={clsx("inline-block max-w-full align-middle", className)}></img>
 		</a>
 	);
 };
